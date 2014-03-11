@@ -50,6 +50,62 @@
   @include responsive-invisibility('.hidden-sm');
 }
 
+@media (max-width: $screen-md-min) {
+  .video-container {
+    .video-interactions {
+      opacity:1;
+      position:relative;
+      @include clearfix;
+      left:0;
+      top:0;
+      text-align:center;
+      
+      li {
+        float:left;
+      }
+      
+      .share-options {
+        @include clearfix;
+        
+        > li {
+          float:none;
+          
+          &:first-of-type {
+            display:none;
+          }
+        }
+        
+        .reactions {
+          position: relative;
+          @include clearfix;
+        
+          li {
+            width:16.666%;
+            
+            h3 {
+              margin:0;
+            }
+            
+            .btn {
+              width:100%;
+              padding:20px 10px;
+              min-width:0;
+            }
+            
+            &:first-child {
+              width:100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .post-content {
+    padding:20px 2% 0;
+  }
+}
+
 @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
   @include responsive-invisibility('.hidden-md');
 }

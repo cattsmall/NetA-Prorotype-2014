@@ -1,4 +1,900 @@
-@import url(http://fonts.googleapis.com/css?family=Arvo:400,700|Roboto:400,300,700);
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Neuton:200,400,700|Roboto:400,300,700);
+/*
+* Symbolset
+* www.symbolset.com
+* Copyright © 2012 Oak Studios LLC
+* 
+* Upload this file to your web server
+* and place this within your <head> tags.
+* <link href="webfonts/ss-standard.css" rel="stylesheet" />
+*/
+@font-face {
+  font-family: "SSStandard";
+  src: url("../fonts/ss-standard/ss-standard.eot");
+  src: url("../fonts/ss-standard/ss-standard.eot?#iefix") format("embedded-opentype"), url("../fonts/ss-standard/ss-standard.woff") format("woff"), url("../fonts/ss-standard/ss-standard.ttf") format("truetype"), url("../fonts/ss-standard/ss-standard.svg#SSStandard") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ss-icon, .ss-icon.ss-standard,
+[class^="ss-"]:before, [class*=" ss-"]:before,
+[class^="ss-"].ss-standard:before, [class*=" ss-"].ss-standard:before,
+[class^="ss-"].right:after, [class*=" ss-"].right:after,
+[class^="ss-"].ss-standard.right:after, [class*=" ss-"].ss-standard.right:after {
+  font-family: "SSStandard";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+[class^="ss-"].right:before, [class*=" ss-"].ss-standard.right:before {
+  display: none;
+  content: '';
+}
+
+.ss-cursor:before, .ss-cursor.right:after {
+  content: '';
+}
+
+.ss-crosshair:before, .ss-crosshair.right:after {
+  content: '⌖';
+}
+
+.ss-search:before, .ss-search.right:after {
+  content: '🔎';
+}
+
+.ss-zoomin:before, .ss-zoomin.right:after {
+  content: '';
+}
+
+.ss-zoomout:before, .ss-zoomout.right:after {
+  content: '';
+}
+
+.ss-view:before, .ss-view.right:after {
+  content: '👀';
+}
+
+.ss-attach:before, .ss-attach.right:after {
+  content: '📎';
+}
+
+.ss-link:before, .ss-link.right:after {
+  content: '🔗';
+}
+
+.ss-move:before, .ss-move.right:after {
+  content: '';
+}
+
+.ss-write:before, .ss-write.right:after {
+  content: '✎';
+}
+
+.ss-writingdisabled:before, .ss-writingdisabled.right:after {
+  content: '';
+}
+
+.ss-erase:before, .ss-erase.right:after {
+  content: '✐';
+}
+
+.ss-compose:before, .ss-compose.right:after {
+  content: '📝';
+}
+
+.ss-lock:before, .ss-lock.right:after {
+  content: '🔒';
+}
+
+.ss-unlock:before, .ss-unlock.right:after {
+  content: '🔓';
+}
+
+.ss-key:before, .ss-key.right:after {
+  content: '🔑';
+}
+
+.ss-backspace:before, .ss-backspace.right:after {
+  content: '⌫';
+}
+
+.ss-ban:before, .ss-ban.right:after {
+  content: '🚫';
+}
+
+.ss-trash:before, .ss-trash.right:after {
+  content: '';
+}
+
+.ss-target:before, .ss-target.right:after {
+  content: '◎';
+}
+
+.ss-tag:before, .ss-tag.right:after {
+  content: '';
+}
+
+.ss-bookmark:before, .ss-bookmark.right:after {
+  content: '🔖';
+}
+
+.ss-flag:before, .ss-flag.right:after {
+  content: '⚑';
+}
+
+.ss-like:before, .ss-like.right:after {
+  content: '👍';
+}
+
+.ss-dislike:before, .ss-dislike.right:after {
+  content: '👎';
+}
+
+.ss-heart:before, .ss-heart.right:after {
+  content: '♥';
+}
+
+.ss-halfheart:before, .ss-halfheart.right:after {
+  content: '';
+}
+
+.ss-star:before, .ss-star.right:after {
+  content: '⋆';
+}
+
+.ss-halfstar:before, .ss-halfstar.right:after {
+  content: '';
+}
+
+.ss-sample:before, .ss-sample.right:after {
+  content: '';
+}
+
+.ss-crop:before, .ss-crop.right:after {
+  content: '';
+}
+
+.ss-layers:before, .ss-layers.right:after {
+  content: '';
+}
+
+.ss-phone:before, .ss-phone.right:after {
+  content: '📞';
+}
+
+.ss-phonedisabled:before, .ss-phonedisabled.right:after {
+  content: '';
+}
+
+.ss-rss:before, .ss-rss.right:after {
+  content: '';
+}
+
+.ss-facetime:before, .ss-facetime.right:after {
+  content: '';
+}
+
+.ss-reply:before, .ss-reply.right:after {
+  content: '↩';
+}
+
+.ss-send:before, .ss-send.right:after {
+  content: '';
+}
+
+.ss-mail:before, .ss-mail.right:after {
+  content: '✉';
+}
+
+.ss-inbox:before, .ss-inbox.right:after {
+  content: '📥';
+}
+
+.ss-chat:before, .ss-chat.right:after {
+  content: '💬';
+}
+
+.ss-user:before, .ss-user.right:after {
+  content: '👤';
+}
+
+.ss-femaleuser:before, .ss-femaleuser.right:after {
+  content: '👧';
+}
+
+.ss-users:before, .ss-users.right:after {
+  content: '👥';
+}
+
+.ss-cart:before, .ss-cart.right:after {
+  content: '';
+}
+
+.ss-creditcard:before, .ss-creditcard.right:after {
+  content: '💳';
+}
+
+.ss-dollarsign:before, .ss-dollarsign.right:after {
+  content: '💲';
+}
+
+.ss-barchart:before, .ss-barchart.right:after {
+  content: '📊';
+}
+
+.ss-piechart:before, .ss-piechart.right:after {
+  content: '';
+}
+
+.ss-box:before, .ss-box.right:after {
+  content: '📦';
+}
+
+.ss-home:before, .ss-home.right:after {
+  content: '⌂';
+}
+
+.ss-globe:before, .ss-globe.right:after {
+  content: '🌎';
+}
+
+.ss-navigate:before, .ss-navigate.right:after {
+  content: '';
+}
+
+.ss-compass:before, .ss-compass.right:after {
+  content: '';
+}
+
+.ss-signpost:before, .ss-signpost.right:after {
+  content: '';
+}
+
+.ss-map:before, .ss-map.right:after {
+  content: '';
+}
+
+.ss-location:before, .ss-location.right:after {
+  content: '';
+}
+
+.ss-pin:before, .ss-pin.right:after {
+  content: '📍';
+}
+
+.ss-database:before, .ss-database.right:after {
+  content: '';
+}
+
+.ss-hdd:before, .ss-hdd.right:after {
+  content: '';
+}
+
+.ss-music:before, .ss-music.right:after {
+  content: '♫';
+}
+
+.ss-mic:before, .ss-mic.right:after {
+  content: '🎤';
+}
+
+.ss-volume:before, .ss-volume.right:after {
+  content: '🔈';
+}
+
+.ss-lowvolume:before, .ss-lowvolume.right:after {
+  content: '🔉';
+}
+
+.ss-highvolume:before, .ss-highvolume.right:after {
+  content: '🔊';
+}
+
+.ss-airplay:before, .ss-airplay.right:after {
+  content: '';
+}
+
+.ss-camera:before, .ss-camera.right:after {
+  content: '📷';
+}
+
+.ss-picture:before, .ss-picture.right:after {
+  content: '🌄';
+}
+
+.ss-video:before, .ss-video.right:after {
+  content: '📹';
+}
+
+.ss-play:before, .ss-play.right:after {
+  content: '▶';
+}
+
+.ss-pause:before, .ss-pause.right:after {
+  content: '';
+}
+
+.ss-stop:before, .ss-stop.right:after {
+  content: '■';
+}
+
+.ss-record:before, .ss-record.right:after {
+  content: '●';
+}
+
+.ss-rewind:before, .ss-rewind.right:after {
+  content: '⏪';
+}
+
+.ss-fastforward:before, .ss-fastforward.right:after {
+  content: '⏩';
+}
+
+.ss-skipback:before, .ss-skipback.right:after {
+  content: '⏮';
+}
+
+.ss-skipforward:before, .ss-skipforward.right:after {
+  content: '⏭';
+}
+
+.ss-eject:before, .ss-eject.right:after {
+  content: '⏏';
+}
+
+.ss-repeat:before, .ss-repeat.right:after {
+  content: '🔁';
+}
+
+.ss-replay:before, .ss-replay.right:after {
+  content: '↺';
+}
+
+.ss-shuffle:before, .ss-shuffle.right:after {
+  content: '🔀';
+}
+
+.ss-book:before, .ss-book.right:after {
+  content: '📕';
+}
+
+.ss-openbook:before, .ss-openbook.right:after {
+  content: '📖';
+}
+
+.ss-notebook:before, .ss-notebook.right:after {
+  content: '📓';
+}
+
+.ss-grid:before, .ss-grid.right:after {
+  content: '';
+}
+
+.ss-rows:before, .ss-rows.right:after {
+  content: '';
+}
+
+.ss-columns:before, .ss-columns.right:after {
+  content: '';
+}
+
+.ss-thumbnails:before, .ss-thumbnails.right:after {
+  content: '';
+}
+
+.ss-desktop:before, .ss-desktop.right:after {
+  content: '💻';
+}
+
+.ss-laptop:before, .ss-laptop.right:after {
+  content: '';
+}
+
+.ss-tablet:before, .ss-tablet.right:after {
+  content: '';
+}
+
+.ss-cell:before, .ss-cell.right:after {
+  content: '📱';
+}
+
+.ss-battery:before, .ss-battery.right:after {
+  content: '🔋';
+}
+
+.ss-highbattery:before, .ss-highbattery.right:after {
+  content: '';
+}
+
+.ss-mediumbattery:before, .ss-mediumbattery.right:after {
+  content: '';
+}
+
+.ss-lowbattery:before, .ss-lowbattery.right:after {
+  content: '';
+}
+
+.ss-emptybattery:before, .ss-emptybattery.right:after {
+  content: '';
+}
+
+.ss-downloadcloud:before, .ss-downloadcloud.right:after {
+  content: '';
+}
+
+.ss-download:before, .ss-download.right:after {
+  content: '';
+}
+
+.ss-uploadcloud:before, .ss-uploadcloud.right:after {
+  content: '';
+}
+
+.ss-upload:before, .ss-upload.right:after {
+  content: '';
+}
+
+.ss-fork:before, .ss-fork.right:after {
+  content: '';
+}
+
+.ss-merge:before, .ss-merge.right:after {
+  content: '';
+}
+
+.ss-refresh:before, .ss-refresh.right:after {
+  content: '↻';
+}
+
+.ss-sync:before, .ss-sync.right:after {
+  content: '';
+}
+
+.ss-loading:before, .ss-loading.right:after {
+  content: '';
+}
+
+.ss-wifi:before, .ss-wifi.right:after {
+  content: '';
+}
+
+.ss-connection:before, .ss-connection.right:after {
+  content: '';
+}
+
+.ss-file:before, .ss-file.right:after {
+  content: '📄';
+}
+
+.ss-folder:before, .ss-folder.right:after {
+  content: '📁';
+}
+
+.ss-quote:before, .ss-quote.right:after {
+  content: '“';
+}
+
+.ss-text:before, .ss-text.right:after {
+  content: '';
+}
+
+.ss-font:before, .ss-font.right:after {
+  content: '';
+}
+
+.ss-print:before, .ss-print.right:after {
+  content: '⎙';
+}
+
+.ss-fax:before, .ss-fax.right:after {
+  content: '📠';
+}
+
+.ss-list:before, .ss-list.right:after {
+  content: '';
+}
+
+.ss-layout:before, .ss-layout.right:after {
+  content: '';
+}
+
+.ss-action:before, .ss-action.right:after {
+  content: '';
+}
+
+.ss-redirect:before, .ss-redirect.right:after {
+  content: '↪';
+}
+
+.ss-expand:before, .ss-expand.right:after {
+  content: '⤢';
+}
+
+.ss-contract:before, .ss-contract.right:after {
+  content: '';
+}
+
+.ss-help:before, .ss-help.right:after {
+  content: '❓';
+}
+
+.ss-info:before, .ss-info.right:after {
+  content: 'ℹ';
+}
+
+.ss-alert:before, .ss-alert.right:after {
+  content: '⚠';
+}
+
+.ss-caution:before, .ss-caution.right:after {
+  content: '⛔';
+}
+
+.ss-logout:before, .ss-logout.right:after {
+  content: '';
+}
+
+.ss-plus:before, .ss-plus.right:after {
+  content: '+';
+}
+
+.ss-hyphen:before, .ss-hyphen.right:after {
+  content: '-';
+}
+
+.ss-check:before, .ss-check.right:after {
+  content: '✓';
+}
+
+.ss-delete:before, .ss-delete.right:after {
+  content: '␡';
+}
+
+.ss-settings:before, .ss-settings.right:after {
+  content: '⚙';
+}
+
+.ss-dashboard:before, .ss-dashboard.right:after {
+  content: '';
+}
+
+.ss-notifications:before, .ss-notifications.right:after {
+  content: '🔔';
+}
+
+.ss-notificationsdisabled:before, .ss-notificationsdisabled.right:after {
+  content: '🔕';
+}
+
+.ss-clock:before, .ss-clock.right:after {
+  content: '⏲';
+}
+
+.ss-stopwatch:before, .ss-stopwatch.right:after {
+  content: '⏱';
+}
+
+.ss-calendar:before, .ss-calendar.right:after {
+  content: '📅';
+}
+
+.ss-addcalendar:before, .ss-addcalendar.right:after {
+  content: '';
+}
+
+.ss-removecalendar:before, .ss-removecalendar.right:after {
+  content: '';
+}
+
+.ss-checkcalendar:before, .ss-checkcalendar.right:after {
+  content: '';
+}
+
+.ss-deletecalendar:before, .ss-deletecalendar.right:after {
+  content: '';
+}
+
+.ss-briefcase:before, .ss-briefcase.right:after {
+  content: '💼';
+}
+
+.ss-cloud:before, .ss-cloud.right:after {
+  content: '☁';
+}
+
+.ss-droplet:before, .ss-droplet.right:after {
+  content: '💧';
+}
+
+.ss-up:before, .ss-up.right:after {
+  content: '⬆';
+}
+
+.ss-upright:before, .ss-upright.right:after {
+  content: '⬈';
+}
+
+.ss-right:before, .ss-right.right:after {
+  content: '➡';
+}
+
+.ss-downright:before, .ss-downright.right:after {
+  content: '⬊';
+}
+
+.ss-down:before, .ss-down.right:after {
+  content: '⬇';
+}
+
+.ss-downleft:before, .ss-downleft.right:after {
+  content: '⬋';
+}
+
+.ss-left:before, .ss-left.right:after {
+  content: '⬅';
+}
+
+.ss-upleft:before, .ss-upleft.right:after {
+  content: '⬉';
+}
+
+.ss-navigateup:before, .ss-navigateup.right:after {
+  content: '';
+}
+
+.ss-navigateright:before, .ss-navigateright.right:after {
+  content: '▻';
+}
+
+.ss-navigatedown:before, .ss-navigatedown.right:after {
+  content: '';
+}
+
+.ss-navigateleft:before, .ss-navigateleft.right:after {
+  content: '◅';
+}
+
+.ss-directup:before, .ss-directup.right:after {
+  content: '▴';
+}
+
+.ss-directright:before, .ss-directright.right:after {
+  content: '▹';
+}
+
+.ss-dropdown:before, .ss-dropdown.right:after {
+  content: '▾';
+}
+
+.ss-directleft:before, .ss-directleft.right:after {
+  content: '◃';
+}
+
+.ss-retweet:before, .ss-retweet.right:after {
+  content: '';
+}
+
+/* Legacy classes */
+.ss-volumelow:before, .ss-volumelow.right:after {
+  content: '🔉';
+}
+
+.ss-volumehigh:before, .ss-volumehigh.right:after {
+  content: '🔊';
+}
+
+.ss-batteryhigh:before, .ss-batteryhigh.right:after {
+  content: '';
+}
+
+.ss-batterymedium:before, .ss-batterymedium.right:after {
+  content: '';
+}
+
+.ss-batterylow:before, .ss-batterylow.right:after {
+  content: '';
+}
+
+.ss-batteryempty:before, .ss-batteryempty.right:after {
+  content: '';
+}
+
+.ss-clouddownload:before, .ss-clouddownload.right:after {
+  content: '';
+}
+
+.ss-cloudupload:before, .ss-cloudupload.right:after {
+  content: '';
+}
+
+.ss-calendaradd:before, .ss-calendaradd.right:after {
+  content: '';
+}
+
+.ss-calendarremove:before, .ss-calendarremove.right:after {
+  content: '';
+}
+
+.ss-calendarcheck:before, .ss-calendarcheck.right:after {
+  content: '';
+}
+
+.ss-calendardelete:before, .ss-calendardelete.right:after {
+  content: '';
+}
+
+/*
+* Symbolset
+* www.symbolset.com
+* Copyright © 2012 Oak Studios LLC
+* 
+* Upload this file to your web server
+* and place this within your <head> tags.
+* <link href="webfonts/ss-social.css" rel="stylesheet" />
+*/
+@font-face {
+  font-family: "SSSocial";
+  src: url("../fonts/ss-social/ss-social-circle.eot");
+  src: url("../fonts/ss-social/ss-social-circle.eot?#iefix") format("embedded-opentype"), url("../fonts/ss-social/ss-social-circle.woff") format("woff"), url("../fonts/ss-social/ss-social-circle.ttf") format("truetype"), url("../fonts/ss-social/ss-social-circle.svg#SSSocialCircle") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SSSocial";
+  src: url("../fonts/ss-social/ss-social-regular.eot");
+  src: url("../fonts/ss-social/ss-social-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ss-social/ss-social-regular.woff") format("woff"), url("../fonts/ss-social/ss-social-regular.ttf") format("truetype"), url("../fonts/ss-social/ss-social-regular.svg#SSSocialRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ss-icon, .ss-icon.ss-social, .ss-icon.ss-social-circle,
+[class^="ss-"]:before, [class*=" ss-"]:before,
+[class^="ss-"][class*=" ss-social"]:before, [class*=" ss-"][class*=" ss-social"]:before,
+[class^="ss-"].right:after, [class*=" ss-"].right:after,
+[class^="ss-"][class*=" ss-social"].right:after, [class*=" ss-"][class*=" ss-social"].right:after {
+  font-family: "SSSocial";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+.ss-icon.ss-social-circle,
+[class^="ss-"].ss-social-circle:before, [class*=" ss-"].ss-social-circle:before,
+[class^="ss-"].ss-social-circle.right:after, [class*=" ss-"].ss-social-circle.right:after {
+  font-weight: bold;
+}
+
+[class^="ss-"].right:before, [class^="ss-"][class*=" ss-social"].right:before {
+  display: none;
+  content: '';
+}
+
+.ss-facebook:before, .ss-facebook.right:after {
+  content: '';
+}
+
+.ss-twitter:before, .ss-twitter.right:after {
+  content: '';
+}
+
+.ss-linkedin:before, .ss-linkedin.right:after {
+  content: '';
+}
+
+.ss-googleplus:before, .ss-googleplus.right:after {
+  content: '';
+}
+
+.ss-tumblr:before, .ss-tumblr.right:after {
+  content: '';
+}
+
+.ss-wordpress:before, .ss-wordpress.right:after {
+  content: '';
+}
+
+.ss-blogger:before, .ss-blogger.right:after {
+  content: '';
+}
+
+.ss-posterous:before, .ss-posterous.right:after {
+  content: '';
+}
+
+.ss-youtube:before, .ss-youtube.right:after {
+  content: '';
+}
+
+.ss-vimeo:before, .ss-vimeo.right:after {
+  content: '';
+}
+
+.ss-flickr:before, .ss-flickr.right:after {
+  content: '';
+}
+
+.ss-instagram:before, .ss-instagram.right:after {
+  content: '';
+}
+
+.ss-pinterest:before, .ss-pinterest.right:after {
+  content: '';
+}
+
+.ss-dribbble:before, .ss-dribbble.right:after {
+  content: '';
+}
+
+.ss-behance:before, .ss-behance.right:after {
+  content: '';
+}
+
+.ss-github:before, .ss-github.right:after {
+  content: '';
+}
+
+.ss-octocat:before, .ss-octocat.right:after {
+  content: '';
+}
+
+.ss-paypal:before, .ss-paypal.right:after {
+  content: '';
+}
+
+.ss-foursquare:before, .ss-foursquare.right:after {
+  content: '';
+}
+
+.ss-skype:before, .ss-skype.right:after {
+  content: '';
+}
+
+.ss-rdio:before, .ss-rdio.right:after {
+  content: '';
+}
+
+.ss-spotify:before, .ss-spotify.right:after {
+  content: '';
+}
+
+.ss-lastfm:before, .ss-lastfm.right:after {
+  content: '';
+}
+
+.ss-mail:before, .ss-mail.right:after {
+  content: '✉';
+}
+
+.ss-like:before, .ss-like.right:after {
+  content: '👍';
+}
+
+.ss-rss:before, .ss-rss.right:after {
+  content: '';
+}
+
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -6138,6 +7034,396 @@ button.close {
     bottom: 20px;
   }
 }
+.navigation {
+  background: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.page-header {
+  margin: 0;
+  padding: 30px 0;
+  text-align: center;
+}
+.page-header h1 {
+  margin: 0 0 .25em;
+  font-family: "Neuton", serif;
+}
+.page-header span + span:before {
+  display: inline-block;
+  content: "▪";
+  color: #999999;
+  margin: 0 11px 0 5px;
+}
+
+.video-container {
+  position: relative;
+}
+.video-container .video-player img {
+  width: 100%;
+}
+.video-container .video-interactions {
+  position: absolute;
+  -webkit-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+  opacity: 0;
+  top: 10px;
+  left: 10px;
+  text-align: right;
+}
+.video-container .video-interactions .share-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.video-container .video-interactions .share-options h3 {
+  margin: 10px 0 0;
+  background: black;
+  text-align: center;
+  padding: 5px;
+  color: white;
+  font-size: .85em;
+  font-weight: 200;
+}
+.video-container .video-interactions .share-options li .btn {
+  display: block;
+  padding: 20px 10px;
+  min-width: 80px;
+}
+.video-container .video-interactions .share-options .reactions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.video-container .video-interactions .share-options .reactions .btn {
+  border-radius: 0;
+}
+.video-container:hover .video-interactions {
+  opacity: 1;
+}
+
+.meta {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.meta span + span {
+  margin: 0 0 0 5px;
+}
+
+.post-content {
+  padding: 40px 10% 0 0;
+}
+.post-content .video-details p:not(.meta) {
+  font-size: 1.5em;
+  font-family: "Neuton", serif;
+}
+.post-content .video-details .meta {
+  color: #999999;
+  margin: 0 0 .25em;
+}
+.post-content .video-details .sharing {
+  margin: 0 0 30px;
+}
+.post-content .video-details .sharing ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.post-content .video-details .sharing ul:before, .post-content .video-details .sharing ul:after {
+  content: " ";
+  display: table;
+}
+.post-content .video-details .sharing ul:after {
+  clear: both;
+}
+.post-content .video-details .sharing ul li {
+  float: left;
+}
+.post-content h3 {
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 700;
+  margin: 0 0 .5em;
+}
+
+.reaction-data {
+  margin-top: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-width: 1px 0;
+  padding: 30px 0;
+}
+.reaction-data .reaction-header .btn {
+  vertical-align: middle;
+  margin-left: 10px;
+}
+.reaction-data .reaction-header .btn .ss-icon {
+  font-size: 8px;
+}
+.reaction-data .reaction-header .facepile-data:before, .reaction-data .reaction-header .facepile-data:after {
+  content: " ";
+  display: table;
+}
+.reaction-data .reaction-header .facepile-data:after {
+  clear: both;
+}
+.reaction-data .reaction-header .facepile-data ul {
+  float: left;
+  margin: 0 15px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.reaction-data .reaction-header .facepile-data ul li {
+  display: inline-block;
+}
+.reaction-data .reaction-header .facepile-data ul li img {
+  width: 32px;
+}
+.reaction-data .reaction-header .facepile-data p {
+  margin: 0;
+}
+.reaction-data .reactions {
+  display: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.reaction-data .reactions:before, .reaction-data .reactions:after {
+  content: " ";
+  display: table;
+}
+.reaction-data .reactions:after {
+  clear: both;
+}
+.reaction-data .reactions li {
+  float: left;
+  width: 16.666%;
+  padding: 20px 0 31px;
+  position: relative;
+}
+.reaction-data .reactions li .progress {
+  height: 200px;
+  border-radius: 0;
+  position: relative;
+  margin: 0;
+}
+.reaction-data .reactions li .progress .progress-bar {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.reaction-data .reactions li .progress .progress-bar.lol-bar {
+  height: 20%;
+}
+.reaction-data .reactions li .progress .progress-bar.omg-bar {
+  height: 10%;
+}
+.reaction-data .reactions li .progress .progress-bar.ftw-bar {
+  height: 5%;
+}
+.reaction-data .reactions li .progress .progress-bar.why-bar {
+  height: 15%;
+}
+.reaction-data .reactions li .progress .progress-bar.win-bar {
+  height: 30%;
+}
+.reaction-data .reactions li .progress .progress-bar.wtf-bar {
+  height: 10%;
+}
+.reaction-data .reactions li .btn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: block;
+  border-radius: 0;
+  left: 0;
+}
+
+.related-videos {
+  padding: 30px 0;
+}
+.related-videos ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.related-videos h4 {
+  font-weight: 200;
+  color: #999999;
+  margin: 0 0 .5em;
+}
+.related-videos .video-discovery .carousel-control {
+  z-index: 0;
+  opacity: 0;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.related-videos .video-discovery .carousel-control .ss-icon {
+  position: absolute;
+  top: 45%;
+  left: 10px;
+}
+.related-videos .video-discovery .carousel-control.right .ss-icon {
+  left: inherit;
+  right: 10px;
+}
+.related-videos .video-discovery:hover .carousel-control {
+  z-index: 5;
+  opacity: 1;
+}
+.related-videos .video-discovery .video-list-large:before, .related-videos .video-discovery .video-list-large:after {
+  content: " ";
+  display: table;
+}
+.related-videos .video-discovery .video-list-large:after {
+  clear: both;
+}
+.related-videos .video-discovery .video-list-large li {
+  width: 49%;
+  float: left;
+}
+.related-videos .video-discovery .video-list-large li a {
+  position: relative;
+  display: block;
+}
+.related-videos .video-discovery .video-list-large li a img {
+  display: block;
+}
+.related-videos .video-discovery .video-list-large li a h2, .related-videos .video-discovery .video-list-large li a p {
+  text-align: center;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.related-videos .video-discovery .video-list-large li a h2 {
+  top: 15%;
+  font-size: 2em;
+  font-family: "Neuton", serif;
+  width: 100%;
+  padding: 20px 40px;
+}
+.related-videos .video-discovery .video-list-large li a p {
+  opacity: 0;
+  top: 45%;
+  width: 100%;
+  padding: 20px;
+}
+.related-videos .video-discovery .video-list-large li a:after {
+  position: absolute;
+  content: "";
+  background: black;
+  opacity: .35;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.related-videos .video-discovery .video-list-large li a:hover h2 {
+  opacity: 0;
+}
+.related-videos .video-discovery .video-list-large li a:hover p {
+  opacity: 1;
+}
+.related-videos .video-discovery .video-list-large li + li {
+  margin: 0 0 0 2%;
+}
+
+.comments-area {
+  background: #eeeeee;
+  padding: 0;
+}
+.comments-area h3 {
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 700;
+  color: #555555;
+  margin: 0 0 .5em;
+}
+.comments-area .top-comment {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 40px 40px 20px;
+}
+.comments-area .top-comment p {
+  font-weight: 200;
+}
+.comments-area .top-comment p:before {
+  content: "\201C";
+}
+.comments-area .top-comment p:after {
+  content: "\201D";
+}
+.comments-area .comment-form {
+  padding: 0 0 20px;
+  margin: 0 0 20px;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.15);
+}
+.comments-area .comment-form:before, .comments-area .comment-form:after {
+  content: " ";
+  display: table;
+}
+.comments-area .comment-form:after {
+  clear: both;
+}
+.comments-area .comment-form textarea {
+  width: 100%;
+  margin-bottom: 5px;
+  resize: vertical;
+  min-height: 100px;
+}
+.comments-area .comment-form .btn {
+  float: right;
+}
+.comments-area .commenting {
+  padding: 20px;
+}
+.comments-area .commenting ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.comments-area .commenting ul li {
+  padding: 10px 0;
+}
+.comments-area .commenting ul li:before, .comments-area .commenting ul li:after {
+  content: " ";
+  display: table;
+}
+.comments-area .commenting ul li:after {
+  clear: both;
+}
+.comments-area .commenting ul li + li {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+.comments-area .commenting ul li h4 {
+  font-size: 1em;
+  margin: 0;
+}
+.comments-area .commenting ul li p {
+  font-size: .75em;
+}
+.comments-area .commenting ul li p.comment-options {
+  margin-bottom: 0;
+  padding-left: 79px;
+}
+.comments-area .commenting ul li p.comment-options a + a {
+  margin-left: 5px;
+}
+.comments-area .commenting ul li img {
+  float: left;
+  width: 64px;
+  margin-right: 15px;
+}
+
 .clearfix:before, .clearfix:after {
   content: " ";
   display: table;
@@ -6279,6 +7565,66 @@ button.close {
     display: none !important;
   }
 }
+@media (max-width: 992px) {
+  .video-container .video-interactions {
+    opacity: 1;
+    position: relative;
+    left: 0;
+    top: 0;
+    text-align: center;
+  }
+  .video-container .video-interactions:before, .video-container .video-interactions:after {
+    content: " ";
+    display: table;
+  }
+  .video-container .video-interactions:after {
+    clear: both;
+  }
+  .video-container .video-interactions li {
+    float: left;
+  }
+  .video-container .video-interactions .share-options:before, .video-container .video-interactions .share-options:after {
+    content: " ";
+    display: table;
+  }
+  .video-container .video-interactions .share-options:after {
+    clear: both;
+  }
+  .video-container .video-interactions .share-options > li {
+    float: none;
+  }
+  .video-container .video-interactions .share-options > li:first-of-type {
+    display: none;
+  }
+  .video-container .video-interactions .share-options .reactions {
+    position: relative;
+  }
+  .video-container .video-interactions .share-options .reactions:before, .video-container .video-interactions .share-options .reactions:after {
+    content: " ";
+    display: table;
+  }
+  .video-container .video-interactions .share-options .reactions:after {
+    clear: both;
+  }
+  .video-container .video-interactions .share-options .reactions li {
+    width: 16.666%;
+  }
+  .video-container .video-interactions .share-options .reactions li h3 {
+    margin: 0;
+  }
+  .video-container .video-interactions .share-options .reactions li .btn {
+    width: 100%;
+    padding: 20px 10px;
+    min-width: 0;
+  }
+  .video-container .video-interactions .share-options .reactions li:first-child {
+    width: 100%;
+  }
+
+  .post-content {
+    padding: 20px 2% 0;
+  }
+}
 @media (min-width: 992px) and (max-width: 1199px) {
   .hidden-md {
     display: none !important;
@@ -6315,10 +7661,4 @@ button.close {
   .hidden-print {
     display: none !important;
   }
-}
-.navigation {
-  background: black;
-  color: white;
-  padding: 10px;
-  text-align: center;
 }

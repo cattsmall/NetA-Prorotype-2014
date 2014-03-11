@@ -12,45 +12,73 @@
     <article class="">
       <!-- Post data -->
       <header class="page-header">
-        <h1>George Jefferson surfs like a pro in Malibu</h1>
-        <p class="meta">
-          <span>Posted on January 17, 2014.</span>
-          <span>Discovered on <strong>Network A</strong>.</span>
-          <span>130,000 views</span>
-        </p>
+        <div class="container">
+          <h1>
+            George Jefferson surfs like a pro in Malibu
+          </h1>
+          <p class="meta">
+            <span class="view-count">130,000 views</span>
+            <span>Sponsored by <strong class="icon-target">Target</strong></span>
+            <span>Discovered on <strong class="icon-neta">Network A</strong></span>
+          </p>
+        </div>
       </header>
+      
+      <!-- Video -->
       <section class="video-container">
         <div class="video-player">
           <img src="img/videos/b16c5f4f-5979-42f0-a9ac-73079fc5f1ad.jpg" alt="B16c5f4f 5979 42f0 A9ac 73079fc5f1ad">
         </div>
         <nav class="video-interactions">
           <ul class="share-options">
-            <li><button class="btn">Like</button></li>
+            <li>
+              <button class="btn btn-primary">
+                <i class="ss-icon ss-standard">like</i>
+                Like
+              </button>
+            </li>
             <li>
               <ul class="reactions">
                 <li><h3>React</h3></li>
-                <li><button class="btn">LOL</button></li>
-                <li><button class="btn">OMG</button></li>
-                <li><button class="btn">FTW</button></li>
-                <li><button class="btn">WHY</button></li>
-                <li><button class="btn">WIN</button></li>
-                <li><button class="btn">WTF</button></li>
+                <li><button class="btn btn-danger">LOL</button></li>
+                <li><button class="btn btn-danger">OMG</button></li>
+                <li><button class="btn btn-danger">FTW</button></li>
+                <li><button class="btn btn-danger">WHY</button></li>
+                <li><button class="btn btn-danger">WIN</button></li>
+                <li><button class="btn btn-danger">WTF</button></li>
               </ul>
           </ul>
         </nav>
       </section>
+      
+      <!-- Post content -->
       <section class="post container">
         <!-- Editorial content -->
-        <div class="post-content">
+        <div class="post-content col-md-8">
           <section class="video-details">
             <header class="sharing">
               <ul class="share-options">
-                <li><button class="btn">Like</button></li>
-                <li><button class="btn">Share on Facebook</button></li>
-                <li><button class="btn">Tweet</button></li>
-                <li><button class="btn">Email</button></li>
+                <button class="btn btn-primary">
+                  <i class="ss-icon ss-standard">like</i>
+                  Like
+                </button>
+                <button class="btn btn-default">
+                  <i class="ss-icon ss-social">facebook</i>
+                  Share
+                </button>
+                <button class="btn btn-default">
+                  <i class="ss-icon ss-social">twitter</i>
+                  Tweet
+                </button>
+                <button class="btn btn-default">
+                  <i class="ss-icon ss-social">email</i>
+                  Email
+                </button>
               </ul>
             </header>
+            <p class="meta">
+              <span>Posted on January 17, 2014</span>
+            </p>
             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus.</p>
 
             <p>Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
@@ -67,71 +95,111 @@
                   <li><img src="img/users/128-3.jpg"></li>
                   <li><img src="img/users/128-4.jpg"></li>
                 </ul>
-                <p>13 of your friends thought this video was <strong class="omg-reaction">OMG</strong>.</p>
+                <p>
+                  13 of your friends thought this video was <strong class="omg-reaction">OMG</strong>.
+                  <button class="btn btn-sm btn-default" id="reaction-chart-toggle">
+                    See the chart
+                    <i class="ss-icon ss-standard">
+                      dropdown
+                    </i>
+                   </button>
+                </p>
               </div>
             </header>
-            <ul class="reactions">
+            <ul class="reactions" id="reaction-chart">
               <li>
                 <div class="progress">
-                  <div class="bar lol-bar">
+                  <div class="progress-bar progress-bar-danger lol-bar">
+                  </div>
                 </div>
-                <button class="btn">LOL</button>
+                <button class="btn btn-danger">LOL</button>
               </li>
               <li>
                 <div class="progress">
-                  <div class="bar omg-bar">
+                  <div class="progress-bar progress-bar-danger omg-bar">
+                  </div>
                 </div>
-                <button class="btn">OMG</button>
+                <button class="btn btn-danger">OMG</button>
               </li>
               <li>
                 <div class="progress">
-                  <div class="bar ftw-bar">
+                  <div class="progress-bar progress-bar-danger ftw-bar">
+                  </div>
                 </div>
-                <button class="btn">FTW</button>
+                <button class="btn btn-danger">FTW</button>
               </li>
               <li>
                 <div class="progress">
-                  <div class="bar why-bar">
+                  <div class="progress-bar progress-bar-danger why-bar">
+                  </div>
                 </div>
-                <button class="btn">WHY</button>
+                <button class="btn btn-danger">WHY</button>
               </li>
               <li>
                 <div class="progress">
-                  <div class="bar win-bar">
+                  <div class="progress-bar progress-bar-danger win-bar">
+                  </div>
                 </div>
-                <button class="btn">WIN</button>
+                <button class="btn btn-danger">WIN</button>
               </li>
               <li>
                 <div class="progress">
-                  <div class="bar wtf-bar">
+                  <div class="progress-bar progress-bar-danger wtf-bar">
+                  </div>
                 </div>
-                <button class="btn">WTF</button>
+                <button class="btn btn-danger">WTF</button>
               </li>
             </ul>
           </section>
           
           <!-- Related videos -->
           <aside class="related-videos">
-            <h3>Discover more content</h3>
             <!-- Videos -->
             <section class="video-discovery">
-              <h4>Similar videos</h4>
-              <ul class="video-list-large carousel">
-                <li>
-                  <a>
-                    <h2>Cats on a bicycle in Paris</h2>
-                    <p>Wow.</p>
-                    <img src="img/videos/44130ec6-de11-4c91-83cb-faafec9d2fa5.jpg" alt="44130ec6 De11 4c91 83cb Faafec9d2fa5">
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <h2>Baby dances on a skateboard</h2>
-                    <p>It's pretty crazy.</p>
-                    <img src="img/videos/996c8326-e252-443e-9d79-573f5d210c24.jpg" alt="996c8326 E252 443e 9d79 573f5d210c24">
-                  </a>
-                </li>
-              </ul>
+              <h4>Discover more content</h4>
+              <div class="carousel slide" id="carousel-example-generic" data-ride="carousel">
+                <div class="carousel-inner">
+                  <ul class="video-list-large item">
+                    <li>
+                      <a>
+                        <h2>Cats on a bicycle in Paris</h2>
+                        <p>Wow.</p>
+                        <img src="img/videos/44130ec6-de11-4c91-83cb-faafec9d2fa5.jpg" alt="44130ec6 De11 4c91 83cb Faafec9d2fa5">
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <h2>Baby dances on a skateboard</h2>
+                        <p>It's pretty crazy.</p>
+                        <img src="img/videos/996c8326-e252-443e-9d79-573f5d210c24.jpg" alt="996c8326 E252 443e 9d79 573f5d210c24">
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="video-list-large item active">
+                    <li>
+                      <a>
+                        <h2>Cats on a bicycle in Paris</h2>
+                        <p>Wow.</p>
+                        <img src="img/videos/44130ec6-de11-4c91-83cb-faafec9d2fa5.jpg" alt="44130ec6 De11 4c91 83cb Faafec9d2fa5">
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <h2>Baby dances on a skateboard</h2>
+                        <p>It's pretty crazy.</p>
+                        <img src="img/videos/996c8326-e252-443e-9d79-573f5d210c24.jpg" alt="996c8326 E252 443e 9d79 573f5d210c24">
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                  <i class="ss-icon ss-standard">navigateleft</i>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                  <i class="ss-icon ss-standard">navigateright</i>
+                </a>
+              </div>
             </section>
             
             <!-- Tagged Videos -->
@@ -158,19 +226,23 @@
         </div>
         
         <!-- Comments -->
-        <aside class="comments-area">
+        <aside class="comments-area col-md-4">
           <div class="top-comment">
             <h3>Top Comment</h3>
             <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
           </div>
           <div class="commenting">
-            <h3>5 Comments</h3>
+            <form class="comment-form">
+              <textarea placeholder="Leave a comment and start a conversation!"></textarea>
+              <button class="btn btn-primary">Post your comment</button>
+            </form>
+            <h3>5 Comments about this video</h3>
             <ul class="comments-list">
               <li class="comment">
                 <a><img src="img/users/128-2.jpg"></a>
-                <h4>Judy M. Jordan</h4>
+                <h4><a>Judy M. Jordan</a></h4>
                 <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                <p class="comment options">
+                <p class="comment-options">
                   <a>Like</a>
                   <a>Reply</a>
                 </p>
@@ -178,9 +250,9 @@
               
               <li class="comment">
                 <a><img src="img/users/128-6.jpg"></a>
-                <h4>Justin M. Wright</h4>
+                <h4><a>Justin M. Wright</a></h4>
                 <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-                <p class="comment options">
+                <p class="comment-options">
                   <a>Like</a>
                   <a>Reply</a>
                 </p>
@@ -188,9 +260,9 @@
               
               <li class="comment">
                 <a><img src="img/users/128-13.jpg"></a>
-                <h4>William Jones</h4>
+                <h4><a>William Jones</a></h4>
                 <p>Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                <p class="comment options">
+                <p class="comment-options">
                   <a>Like</a>
                   <a>Reply</a>
                 </p>
@@ -198,9 +270,9 @@
               
               <li class="comment">
                 <a><img src="img/users/128-7.jpg"></a>
-                <h4>Kathy Souther</h4>
+                <h4><a>Kathy Souther</a></h4>
                 <p>Curabitur blandit tempus porttitor.</p>
-                <p class="comment options">
+                <p class="comment-options">
                   <a>Like</a>
                   <a>Reply</a>
                 </p>
@@ -208,9 +280,9 @@
               
               <li class="comment">
                 <a><img src="img/users/128-16.jpg"></a>
-                <h4>Jennie J. Waits</h4>
+                <h4><a>Jennie J. Waits</a></h4>
                 <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-                <p class="comment options">
+                <p class="comment-options">
                   <a>Like</a>
                   <a>Reply</a>
                 </p>
@@ -220,5 +292,10 @@
         </aside>
       </section>
     </article>
+    
+    <!-- Scripts -->
+    <script src="js/lib/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/lib/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>
