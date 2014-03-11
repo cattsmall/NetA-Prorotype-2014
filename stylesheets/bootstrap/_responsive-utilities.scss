@@ -44,6 +44,13 @@
 
 @media (max-width: $screen-xs-max) {
   @include responsive-invisibility('.hidden-xs');
+  
+  .reaction-data .reaction-header .btn {
+    width:100%;
+    margin:10px 0 0;
+    font-size:1em;
+    padding:10px;
+  }
 }
 
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
