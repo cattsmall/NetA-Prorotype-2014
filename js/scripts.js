@@ -1,4 +1,5 @@
 $( "#reaction-chart-toggle" ).click(function() {
-  $( "#reaction-chart" ).slideToggle( "slow" );
+  $( "#reaction-chart" ).slideToggle( "fast" );
 });
 
+$('.carousel').carousel();
