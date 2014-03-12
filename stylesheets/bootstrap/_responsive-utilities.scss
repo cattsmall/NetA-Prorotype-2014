@@ -27,6 +27,26 @@
 @include responsive-invisibility('.visible-xs, .visible-sm, .visible-md, .visible-lg');
 
 @media (max-width: $screen-xs) {
+  .page-header {
+    text-align:left;
+  }
+  
+  .video-details {
+    .meta {
+      span {
+        display:block;
+      
+        + span {
+          margin:0;
+        
+          &:before {
+            display:none;
+          }
+        }
+      }
+    }
+  }
+  
   .related-videos  {
     .video-discovery .video-list-large li {
       width:100%;
@@ -35,6 +55,19 @@
       
       + li {
         margin: 10px 0 0;
+      }
+    }
+    
+    .tags .video-list-small li {
+      width:49%;
+      margin-bottom: 7px;
+      
+      &:nth-child(5n) {
+        margin-left:2%;
+      }
+      
+      &:nth-child(2n+1) {
+        margin-left:0;
       }
     }
   }
@@ -140,7 +173,7 @@
   }
   
   .post-content {
-    padding:20px 2% 0;
+    padding:30px 2% 0;
   }
 }
 

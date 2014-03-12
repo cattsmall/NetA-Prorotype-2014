@@ -1,0 +1,223 @@
+
+.related-videos {
+  padding:30px 0;
+  
+  ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  
+  h4 {
+    font-weight:200;
+    color:$gray-light;
+    margin:0 0 .5em;
+    font-size:1.75em;
+  }
+  
+  .video-discovery {
+    .carousel-control {
+      z-index:0;
+      opacity:0;
+      @include transition(.2s all);
+      
+      .ss-icon {
+        position: absolute;
+        top: 45%;
+        left:10px;
+      }
+      
+      &.right {
+        .ss-icon {
+          left:inherit;
+          right:10px;
+        }
+      }
+    }
+    
+    &:hover {
+      .carousel-control {
+        z-index:5;
+        opacity:1;
+      }
+    }
+    
+    .video-list-large {
+      @include clearfix;
+      
+      li {
+        width:49%;
+        float:left;
+        
+        a {
+          position:relative;
+          display:block;
+          
+          img {
+            display:block;
+          }
+          
+          h2, p {
+            text-align:center;
+            position:absolute;
+            z-index:2;
+            color:$white;
+            @include transition(.2s all);
+          }
+          
+          h2 {
+            top:15%;
+            font-size:2em;
+            font-family:$font-family-serif;
+            width:100%;
+            padding:20px 40px;
+          }
+          
+          p {
+            opacity:0;
+            top:45%;
+            width:100%;
+            padding:20px;
+          }
+          
+          &:after {
+            position:absolute;
+            content:"";
+            background:$black;
+            opacity:.35;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+          }
+          
+          &:hover {
+            h2 {
+              opacity:0;
+            }
+            
+            p {
+              opacity:1;
+            }
+          }
+        }
+        
+        + li {
+          margin:0 0 0 2%;
+        }
+      }
+    }
+  }
+  
+  .tags {
+    padding:40px 0 0;
+    
+    .tags-nav {
+      ul {
+        border:0;
+        
+        li {
+          a {
+            border:1px solid fade-out($black, .85);
+            padding: 5px 10px;
+            border-radius:0;
+            margin:0;
+            
+            &:before {
+              content:"\E100";
+              @extend .ss-icon.ss-standard;
+              font-size:10px;
+              margin-right:7px;
+            }
+          }
+          
+          &.active {
+            a {
+              background: fade-out($black, .5);
+              color:$white;
+            }
+          }
+          
+          + li {
+            margin-left:10px;
+          }
+        }
+      }
+    }
+    .tab-pane {
+      padding:10px 0 0;
+    }
+    
+    .video-list-small {
+      @include clearfix;
+      
+      li {
+        width:23.5%;
+        float:left;
+        margin-bottom:10px;
+        
+        a {
+          position:relative;
+          display:block;
+          
+          img {
+            display:block;
+          }
+          
+          h2, p {
+            text-align:center;
+            position:absolute;
+            z-index:2;
+            color:$white;
+            @include transition(.2s all);
+          }
+          
+          h2 {
+            top:9px;
+            font-size:1.25em;
+            font-family:$font-family-serif;
+            width:100%;
+            padding:5px 15px;
+            margin:0;
+          }
+          
+          p {
+            opacity:0;
+            top:15%;
+            width:100%;
+            padding:20px;
+          }
+          
+          &:after {
+            position:absolute;
+            content:"";
+            background:$black;
+            opacity:.35;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+          }
+          
+          &:hover {
+            h2 {
+              opacity:0;
+            }
+            
+            p {
+              opacity:1;
+            }
+          }
+        }
+        
+        + li {
+          margin-left:2%;
+        }
+        
+        &:nth-child(5n) {
+          margin-left:0;
+        }
+      }
+    }
+  }
+}
