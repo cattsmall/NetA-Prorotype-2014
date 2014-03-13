@@ -17,7 +17,7 @@
   font-style: normal;
 }
 
-.ss-icon, .ss-icon.ss-standard, .icon-target:before, .omg-reaction:before, .related-videos .tags .tags-nav ul li a:before,
+.ss-icon, .ss-icon.ss-standard, .icon-target:before, .omg-reaction:before, .video-container .video-interactions .share-options .reactions .btn:hover:after, .related-videos .tags .tags-nav ul li a:before,
 [class^="ss-"]:before, [class*=" ss-"]:before,
 [class^="ss-"].ss-standard:before, [class*=" ss-"].ss-standard:before,
 [class^="ss-"].right:after, [class*=" ss-"].right:after,
@@ -7074,11 +7074,18 @@ button.close {
   }
 }
 
+body {
+  background: black;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+
 .navigation {
   background: black;
   color: white;
   padding: 10px;
   text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 img {
@@ -7098,7 +7105,7 @@ img {
 .meta {
   margin: 0;
   font-size: 1em;
-  font-weight: 300;
+  color: #999999;
   text-transform: uppercase;
 }
 .meta span + span {
@@ -7118,7 +7125,7 @@ img {
 
 .omg-reaction {
   color: white;
-  background: #999999;
+  background: #333333;
   display: inline-block;
   padding: 2px 7px 0;
   margin: 0 0 0 3px;
@@ -7133,6 +7140,7 @@ img {
   margin: 0;
   padding: 30px 0;
   text-align: center;
+  border-bottom-color: rgba(255, 255, 255, 0.15);
 }
 .page-header h1 {
   margin: 0 0 .25em;
@@ -7142,7 +7150,7 @@ img {
 .page-header span + span:before {
   display: inline-block;
   content: "▪";
-  color: #999999;
+  color: #555555;
   margin: 0 11px 0 5px;
 }
 
@@ -7162,6 +7170,14 @@ img {
 
 .video-container {
   position: relative;
+  margin: 0 auto;
+  max-width: 898px;
+}
+.video-container.highres {
+  max-width: 1920px;
+}
+.video-container.hd1080 {
+  max-width: 1080px;
 }
 .video-container .video-player img {
   width: 100%;
@@ -7201,6 +7217,22 @@ img {
 }
 .video-container .video-interactions .share-options .reactions .btn {
   border-radius: 0;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+.video-container .video-interactions .share-options .reactions .btn:not(.btn-danger) {
+  background: #333333;
+  border-bottom: 1px solid black;
+}
+.video-container .video-interactions .share-options .reactions .btn:hover {
+  font-size: 0;
+  padding: 13px 10px 8px;
+}
+.video-container .video-interactions .share-options .reactions .btn:hover:after {
+  font-size: 20px;
+  content: "chat";
+  color: white;
 }
 .video-container:hover .video-interactions {
   opacity: 1;
@@ -7214,7 +7246,6 @@ img {
   font-family: "Neuton", serif;
 }
 .post-content .video-details .meta {
-  color: #999999;
   margin: 0 0 .25em;
 }
 .post-content .video-details .sharing {
@@ -7324,12 +7355,16 @@ img {
   width: 16.666%;
   padding: 10px 0 31px;
   position: relative;
+  border: 1px solid black;
+  border-width: 0 1px 0 0;
 }
 .reaction-data .reactions li .progress {
   height: 200px;
   border-radius: 0;
   position: relative;
   margin: 0;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: none;
 }
 .reaction-data .reactions li .progress .progress-bar {
   position: absolute;
@@ -7337,28 +7372,34 @@ img {
   bottom: 0;
   border-radius: 0;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  -webkit-animation: bar-height-grow 2s 1;
-  animation: bar-height-grow 2s 1;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-animation: bar-height-grow 1s 1;
+  animation: bar-height-grow 1s 1;
+  height: 0;
 }
 .reaction-data .reactions li .progress .progress-bar.lol-bar {
   height: 20%;
 }
 .reaction-data .reactions li .progress .progress-bar.omg-bar {
-  height: 30%;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 .reaction-data .reactions li .progress .progress-bar.ftw-bar {
-  height: 5%;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 .reaction-data .reactions li .progress .progress-bar.why-bar {
-  height: 15%;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 .reaction-data .reactions li .progress .progress-bar.win-bar {
-  height: 10%;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 .reaction-data .reactions li .progress .progress-bar.wtf-bar {
-  height: 10%;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 .reaction-data .reactions li .btn {
   position: absolute;
@@ -7467,7 +7508,7 @@ img {
   border: 0;
 }
 .related-videos .tags .tags-nav ul li a {
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 5px 10px;
   border-radius: 0;
   margin: 0;
@@ -7478,7 +7519,7 @@ img {
   margin-right: 7px;
 }
 .related-videos .tags .tags-nav ul li.active a {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.2);
   color: white;
 }
 .related-videos .tags .tags-nav ul li + li {
@@ -7552,7 +7593,7 @@ img {
 }
 
 .comments-area {
-  background: #eeeeee;
+  background: rgba(255, 255, 255, 0.15);
   padding: 0;
 }
 .comments-area h3 {
@@ -7563,11 +7604,11 @@ img {
   margin: 0 0 .5em;
 }
 .comments-area .top-comment {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 40px 40px 20px;
 }
 .comments-area .top-comment p {
-  font-weight: 200;
+  color: #999999;
 }
 .comments-area .top-comment p:before {
   content: "\201C";
@@ -7578,7 +7619,7 @@ img {
 .comments-area .comment-form {
   padding: 0 0 20px;
   margin: 0 0 20px;
-  border-bottom: 1px dotted rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 .comments-area .comment-form:before, .comments-area .comment-form:after {
   content: " ";
@@ -7615,7 +7656,7 @@ img {
   clear: both;
 }
 .comments-area .commenting ul li + li {
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 .comments-area .commenting ul li h4 {
   font-size: 1em;

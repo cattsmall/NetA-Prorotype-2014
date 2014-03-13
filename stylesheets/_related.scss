@@ -118,7 +118,7 @@
         
         li {
           a {
-            border:1px solid fade-out($black, .85);
+            border:1px solid fade-out($white, .85);
             padding: 5px 10px;
             border-radius:0;
             margin:0;
@@ -133,7 +133,7 @@
           
           &.active {
             a {
-              background: fade-out($black, .5);
+              background: fade-out($white, .8);
               color:$white;
             }
           }

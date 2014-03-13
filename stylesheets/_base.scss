@@ -1,8 +1,15 @@
+body {
+  background:$black;
+  color:$white;
+  -webkit-font-smoothing: antialiased;
+}
+
 .navigation {
   background:$black;
   color:$white;
   padding:10px;
   text-align:center;
+  border-bottom:1px solid fade-out($white,.5);
 }
 
 img {
@@ -27,7 +34,7 @@ img {
 .meta {
   margin:0;
   font-size:1em;
-  font-weight:300;
+  color:$gray-light;
   text-transform:uppercase;
   
   span {
@@ -53,7 +60,7 @@ img {
 
 .omg-reaction {
   color: $white;
-  background:$gray-light;
+  background:$gray-dark;
   display:inline-block;
   padding:2px 7px 0;
   margin:0 0 0 3px;

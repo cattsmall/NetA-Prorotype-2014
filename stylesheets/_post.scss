@@ -9,7 +9,6 @@
     }
     
     .meta {
-      color:$gray-light;
       margin:0 0 .25em;
     }
     
@@ -127,44 +126,49 @@
       width:16.666%;
       padding:10px 0 31px;
       position:relative;
+      border:1px solid $black;
+      border-width:0 1px 0 0;
       
       .progress {
         height:200px;
         border-radius:0;
         position:relative;
         margin:0;
-      
+        background:fade-out($white,.8);
+        box-shadow:none;
+        
         .progress-bar {
           position:absolute;
           width:100%;
           bottom:0;
           border-radius:0;
           border:1px solid fade-out($black,.95);
-          @include transition(all .2s);
-          @include animation(bar-height-grow 2s 1);
+          @include transition(all 1s);
+          @include animation(bar-height-grow 1s 1);
+          height:0;
           
           &.lol-bar {
             height:20%;
           }
           
           &.omg-bar {
-            height:30%;
+            @include animation-delay(.1s);
           }
           
           &.ftw-bar {
-            height:5%;
+            @include animation-delay(.2s);
           }
           
           &.why-bar {
-            height:15%;
+            @include animation-delay(.3s);
           }
           
           &.win-bar {
-            height:10%;
+            @include animation-delay(.4s);
           }
           
           &.wtf-bar {
-            height:10%;
+            @include animation-delay(.5s);
           }
         }
       }

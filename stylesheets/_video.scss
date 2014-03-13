@@ -1,5 +1,15 @@
 .video-container {
   position:relative;
+  margin:0 auto;
+  max-width:898px;
+  
+  &.highres {
+    max-width:1920px;
+  }
+  
+  &.hd1080 {
+    max-width:1080px;
+  }
   
   .video-player {
     img {
@@ -45,6 +55,26 @@
         
         .btn {
           border-radius:0;
+          padding:10px;
+          font-weight:700;
+          font-size:1.5em;
+          
+          &:not(.btn-danger) {
+            background:$gray-dark;
+            border-bottom:1px solid $black;
+          }
+          
+          &:hover {
+            font-size:0;
+            padding: 13px 10px 8px;
+            
+            &:after {
+              font-size:20px;
+              @extend .ss-icon.ss-standard;
+              content:"chat";
+              color:$white;
+            }
+          }
         }
       }
     }

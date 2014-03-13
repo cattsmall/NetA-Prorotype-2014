@@ -1,6 +1,6 @@
 
 .comments-area {
-  background:$gray-lighter;
+  background:fade-out($white,.85);
   padding:0;
   
   h3 {
@@ -12,11 +12,11 @@
   }
   
   .top-comment {
-    border-bottom:1px solid fade-out($black,.85);
+    border-bottom:1px solid fade-out($white,.9);
     padding:40px 40px 20px;
     
     p {
-      font-weight: 200;
+      color:$gray-light;
       
       &:before {
         content:"\201C";
@@ -32,7 +32,7 @@
     padding:0 0 20px;
     margin:0 0 20px;
     @include clearfix;
-    border-bottom:1px dotted fade-out($black,.85);
+    border-bottom:1px solid fade-out($white,.95);
     
     textarea {
       width:100%;
@@ -59,7 +59,7 @@
         padding:10px 0;
         
         + li {
-          border-top:1px solid fade-out($black,.85);
+          border-top:1px solid fade-out($white,.95);
         }
         
         h4 {
