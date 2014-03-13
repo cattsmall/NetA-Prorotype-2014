@@ -30,6 +30,10 @@
           }
         }
       }
+      
+      &:first-child {
+        margin-top:0;
+      }
     }
   }
   
@@ -38,6 +42,31 @@
     font-size:1em;
     font-weight:700;
     margin:0 0 .5em;
+  }
+  
+  .listicle-post-items {
+    list-style:none;
+    margin:20px 0 0;
+    padding:0;
+    
+    h2 {
+      font-weight:700;
+      font-family:$font-family-serif;
+    }
+    
+    .media-caption {
+      display:block;
+      margin:5px 0 0;
+      font-size:.5em;
+      color:$gray;
+      font-family:$font-family-sans-serif;
+    }
+    
+    li {
+      + li {
+        margin-top:20px;
+      }
+    }
   }
 }
 
@@ -84,11 +113,14 @@
   }
   
   .reactions {
-    display:none;
     padding:0;
     margin:0;
     @include clearfix;
     list-style:none;
+    
+    &.slidedown {
+      display:none;
+    }
     
     li {
       float:left;
@@ -108,6 +140,8 @@
           bottom:0;
           border-radius:0;
           border:1px solid fade-out($black,.95);
+          @include animation(bar-height-grow 1.5s 1);
+          @include transition(all .2s);
           
           &.lol-bar {
             height:20%;
