@@ -7136,6 +7136,12 @@ img {
   margin: 0 5px 0 0;
 }
 
+.btn-default {
+  color: #428bca;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: black;
+}
+
 .page-header {
   margin: 0;
   padding: 30px 0;
