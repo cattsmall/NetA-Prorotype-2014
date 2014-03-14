@@ -760,18 +760,23 @@
   font-style: normal;
 }
 
-.ss-icon, .ss-icon.ss-social, .ss-icon.ss-social-circle,
+/* This triggers a redraw in IE to Fix IE8's :before content rendering. */
+html:hover [class^="ss-"] {
+  -ms-zoom: 1;
+}
+
+.ss-icon, .ss-icon.ss-social,
 [class^="ss-"]:before, [class*=" ss-"]:before,
-[class^="ss-"][class*=" ss-social"]:before, [class*=" ss-"][class*=" ss-social"]:before,
+[class^="ss-"].ss-social:before, [class*=" ss-"].ss-social:before,
 [class^="ss-"].right:after, [class*=" ss-"].right:after,
-[class^="ss-"][class*=" ss-social"].right:after, [class*=" ss-"][class*=" ss-social"].right:after {
+[class^="ss-"].ss-social.right:after, [class*=" ss-"].ss-social.right:after {
   font-family: "SSSocial";
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
   text-rendering: optimizeLegibility;
   white-space: nowrap;
-  -webkit-font-feature-settings: "liga";
+  /*-webkit-font-feature-settings: "liga"; Currently broken in Chrome >= v22. Falls back to text-rendering. Safari is unaffected. */
   -moz-font-feature-settings: "liga=1";
   -moz-font-feature-settings: "liga";
   -ms-font-feature-settings: "liga" 1;
@@ -780,13 +785,8 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.ss-icon.ss-social-circle,
-[class^="ss-"].ss-social-circle:before, [class*=" ss-"].ss-social-circle:before,
-[class^="ss-"].ss-social-circle.right:after, [class*=" ss-"].ss-social-circle.right:after {
-  font-weight: bold;
-}
-
-[class^="ss-"].right:before, [class^="ss-"][class*=" ss-social"].right:before {
+[class^="ss-"].right:before,
+[class*=" ss-"].right:before {
   display: none;
   content: '';
 }
@@ -807,6 +807,22 @@
   content: '';
 }
 
+.ss-appdotnet:before, .ss-appdotnet.right:after {
+  content: '';
+}
+
+.ss-zerply:before, .ss-zerply.right:after {
+  content: '';
+}
+
+.ss-reddit:before, .ss-reddit.right:after {
+  content: '';
+}
+
+.ss-steam:before, .ss-steam.right:after {
+  content: '';
+}
+
 .ss-tumblr:before, .ss-tumblr.right:after {
   content: '';
 }
@@ -823,12 +839,24 @@
   content: '';
 }
 
+.ss-quora:before, .ss-quora.right:after {
+  content: '';
+}
+
 .ss-youtube:before, .ss-youtube.right:after {
   content: '';
 }
 
 .ss-vimeo:before, .ss-vimeo.right:after {
   content: '';
+}
+
+.ss-vine:before, .ss-vine.right:after {
+  content: '';
+}
+
+.ss-letterboxd:before, .ss-letterboxd.right:after {
+  content: '';
 }
 
 .ss-flickr:before, .ss-flickr.right:after {
@@ -839,8 +867,36 @@
   content: '';
 }
 
+.ss-500px:before, .ss-500px.right:after {
+  content: '';
+}
+
+.ss-etsy:before, .ss-etsy.right:after {
+  content: '';
+}
+
 .ss-pinterest:before, .ss-pinterest.right:after {
   content: '';
+}
+
+.ss-svpply:before, .ss-svpply.right:after {
+  content: '';
+}
+
+.ss-readmill:before, .ss-readmill.right:after {
+  content: '';
+}
+
+.ss-dropbox:before, .ss-dropbox.right:after {
+  content: '';
+}
+
+.ss-pinboard:before, .ss-pinboard.right:after {
+  content: '';
+}
+
+.ss-delicious:before, .ss-delicious.right:after {
+  content: '';
 }
 
 .ss-dribbble:before, .ss-dribbble.right:after {
@@ -859,12 +915,24 @@
   content: '';
 }
 
+.ss-stackoverflow:before, .ss-stackoverflow.right:after {
+  content: '';
+}
+
 .ss-paypal:before, .ss-paypal.right:after {
   content: '';
 }
 
+.ss-kickstarter:before, .ss-kickstarter.right:after {
+  content: '';
+}
+
 .ss-foursquare:before, .ss-foursquare.right:after {
   content: '';
+}
+
+.ss-yelp:before, .ss-yelp.right:after {
+  content: '';
 }
 
 .ss-skype:before, .ss-skype.right:after {
@@ -883,6 +951,18 @@
   content: '';
 }
 
+.ss-soundcloud:before, .ss-soundcloud.right:after {
+  content: '';
+}
+
+.ss-link:before, .ss-link.right:after {
+  content: '🔗';
+}
+
+.ss-phone:before, .ss-phone.right:after {
+  content: '📞';
+}
+
 .ss-mail:before, .ss-mail.right:after {
   content: '✉';
 }
@@ -893,6 +973,35 @@
 
 .ss-rss:before, .ss-rss.right:after {
   content: '';
+}
+
+.ss-share:before, .ss-share.right:after {
+  content: '';
+}
+
+.ss-apple:before, .ss-apple.right:after {
+  content: '';
+}
+
+.ss-microsoft:before, .ss-microsoft.right:after {
+  content: '';
+}
+
+.ss-windows:before, .ss-windows.right:after {
+  content: '';
+}
+
+.ss-android:before, .ss-android.right:after {
+  content: '';
+}
+
+.ss-blackberry:before, .ss-blackberry.right:after {
+  content: '';
+}
+
+/* Legacy */
+.ss-fivehundredpx:before, .ss-fivehundredpx.right:after {
+  content: '';
 }
 
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
@@ -7275,6 +7384,32 @@ img {
 .post-content .video-details .sharing ul li + li {
   margin-left: 5px;
 }
+.post-content .video-details .sharing ul li.more-options {
+  position: relative;
+}
+.post-content .video-details .sharing ul li.more-options ul {
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: absolute;
+  z-index: -1;
+}
+.post-content .video-details .sharing ul li.more-options ul:before, .post-content .video-details .sharing ul li.more-options ul:after {
+  content: " ";
+  display: table;
+}
+.post-content .video-details .sharing ul li.more-options ul:after {
+  clear: both;
+}
+.post-content .video-details .sharing ul li.more-options:hover > .btn {
+  display: none;
+}
+.post-content .video-details .sharing ul li.more-options:hover ul {
+  opacity: 1;
+  position: relative;
+  width: auto;
+  z-index: 1;
+}
 .post-content .video-details .sharing:first-child {
   margin-top: 0;
 }
@@ -7639,6 +7774,9 @@ img {
   margin-bottom: 5px;
   resize: vertical;
   min-height: 100px;
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(0, 0, 0, 0.75);
+  padding: 5px 8px;
 }
 .comments-area .comment-form .btn {
   float: right;

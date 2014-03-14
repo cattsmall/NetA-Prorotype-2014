@@ -27,6 +27,31 @@
           + li {
             margin-left:5px;
           }
+          
+          &.more-options {
+            position:relative;
+           
+            ul {
+              opacity:0;
+              @include clearfix;
+              @include transition(all .2s);
+              position:absolute;
+              z-index:-1;
+            }
+            
+            &:hover {
+              > .btn {
+                display:none;
+              }
+              
+              ul {
+                opacity:1;
+                position:relative;
+                width:auto;
+                z-index:1;
+              }
+            }
+          }
         }
       }
       
