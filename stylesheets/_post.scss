@@ -30,25 +30,36 @@
           
           &.more-options {
             position:relative;
-           
+            
+            > .btn {
+              opacity:1;
+              position:relative;
+              @include transition(opacity .2s);
+              border-color:transparent;
+              background:fade-out($white,.9);
+            }
+            
             ul {
               opacity:0;
               @include clearfix;
-              @include transition(all .2s);
+              @include transition(opacity .2s);
               position:absolute;
               z-index:-1;
+              min-width: 400px;
+              top:0;
             }
             
             &:hover {
               > .btn {
-                display:none;
+                opacity:0;
+                position:absolute;
               }
               
               ul {
                 opacity:1;
                 position:relative;
-                width:auto;
                 z-index:1;
+                min-width: 0;
               }
             }
           }
@@ -154,6 +165,16 @@
       border:1px solid $black;
       border-width:0 1px 0 0;
       
+      .btn {
+        position:absolute;
+        bottom:0;
+        width:100%;
+        display:block;
+        border-radius:0;
+        left:0;
+        font-weight: 700;
+      }
+      
       .progress {
         height:200px;
         border-radius:0;
@@ -196,15 +217,6 @@
             @include animation-delay(.5s);
           }
         }
-      }
-      
-      .btn {
-        position:absolute;
-        bottom:0;
-        width:100%;
-        display:block;
-        border-radius:0;
-        left:0;
       }
     }
   }

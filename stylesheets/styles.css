@@ -7234,10 +7234,11 @@ img {
 
 .omg-reaction {
   color: white;
-  background: #333333;
+  background: #d9534f;
   display: inline-block;
-  padding: 2px 7px 0;
+  padding: 1px 5px 0;
   margin: 0 0 0 3px;
+  font-weight: 700;
 }
 .omg-reaction:before {
   content: "\1F4AC";
@@ -7247,8 +7248,8 @@ img {
 
 .btn-default {
   color: #428bca;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background: black;
+  border-color: transparent;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .page-header {
@@ -7387,12 +7388,22 @@ img {
 .post-content .video-details .sharing ul li.more-options {
   position: relative;
 }
+.post-content .video-details .sharing ul li.more-options > .btn {
+  opacity: 1;
+  position: relative;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  border-color: transparent;
+  background: rgba(255, 255, 255, 0.1);
+}
 .post-content .video-details .sharing ul li.more-options ul {
   opacity: 0;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
   position: absolute;
   z-index: -1;
+  min-width: 400px;
+  top: 0;
 }
 .post-content .video-details .sharing ul li.more-options ul:before, .post-content .video-details .sharing ul li.more-options ul:after {
   content: " ";
@@ -7402,13 +7413,14 @@ img {
   clear: both;
 }
 .post-content .video-details .sharing ul li.more-options:hover > .btn {
-  display: none;
+  opacity: 0;
+  position: absolute;
 }
 .post-content .video-details .sharing ul li.more-options:hover ul {
   opacity: 1;
   position: relative;
-  width: auto;
   z-index: 1;
+  min-width: 0;
 }
 .post-content .video-details .sharing:first-child {
   margin-top: 0;
@@ -7499,6 +7511,15 @@ img {
   border: 1px solid black;
   border-width: 0 1px 0 0;
 }
+.reaction-data .reactions li .btn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: block;
+  border-radius: 0;
+  left: 0;
+  font-weight: 700;
+}
 .reaction-data .reactions li .progress {
   height: 200px;
   border-radius: 0;
@@ -7541,14 +7562,6 @@ img {
 .reaction-data .reactions li .progress .progress-bar.wtf-bar {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
-}
-.reaction-data .reactions li .btn {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  display: block;
-  border-radius: 0;
-  left: 0;
 }
 
 .related-videos {
@@ -7684,6 +7697,7 @@ img {
 .related-videos .tags .video-list-small li a {
   position: relative;
   display: block;
+  cursor: pointer;
 }
 .related-videos .tags .video-list-small li a img {
   display: block;
@@ -7731,6 +7745,12 @@ img {
 }
 .related-videos .tags .video-list-small li:nth-child(5n) {
   margin-left: 0;
+}
+.related-videos .tags .video-list-small li.see-all h2 {
+  top: 34%;
+}
+.related-videos .tags .video-list-small li.see-all p {
+  top: 5%;
 }
 
 .comments-area {
@@ -8064,6 +8084,9 @@ img {
     width: 100%;
     padding: 20px 10px;
     min-width: 0;
+  }
+  .video-container .video-interactions .share-options .reactions li .btn:hover {
+    padding: 23px 10px 18px;
   }
   .video-container .video-interactions .share-options .reactions li:first-child {
     width: 100%;

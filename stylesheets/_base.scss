@@ -60,10 +60,11 @@ img {
 
 .omg-reaction {
   color: $white;
-  background:$gray-dark;
+  background:$brand-danger;
   display:inline-block;
-  padding:2px 7px 0;
+  padding:1px 5px 0;
   margin:0 0 0 3px;
+  font-weight: 700;
   
   &:before {
     content:"\1F4AC";
@@ -75,6 +76,6 @@ img {
 
 .btn-default {
   color:$link-color;
-  border:1px solid fade-out($white, .7);
-  background:$black;
+  border-color:transparent;
+  background:fade-out($white, .8);
 }

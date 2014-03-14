@@ -159,6 +159,7 @@
         a {
           position:relative;
           display:block;
+          cursor:pointer;
           
           img {
             display:block;
@@ -216,6 +217,17 @@
         
         &:nth-child(5n) {
           margin-left:0;
+        }
+        
+        &.see-all {
+          
+          h2 {
+            top:34%;
+          }
+          
+          p {
+            top:5%;
+          }
         }
       }
     }
