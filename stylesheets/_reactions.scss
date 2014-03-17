@@ -1,0 +1,114 @@
+.reaction-data {
+  padding:30px 20px;
+  border-bottom:1px solid fade-out($white,.9);
+  
+  #reaction-chart-toggle {
+    vertical-align:middle;
+    margin: 10px 0 0;
+    width: 100%;
+    color:$link-color;
+    
+    .ss-icon {
+      font-size:8px;
+    }
+  }
+  
+  .reaction-header {
+    .facepile-data {
+      @include clearfix;
+      
+      ul {
+        float:left;
+        margin:0 15px 0 0;
+        padding:0;
+        list-style:none;
+        
+        li {
+          display:inline-block;
+          
+          img {
+            width:32px;
+          }
+        }
+      }
+      
+      p {
+        margin:0;
+      }
+    }
+  }
+  
+  .reactions {
+    padding:0;
+    margin:0;
+    @include clearfix;
+    list-style:none;
+    
+    &.slidedown {
+      display:none;
+    }
+    
+    li {
+      float:left;
+      width:16.666%;
+      padding:10px 0 31px;
+      position:relative;
+      border:1px solid $black;
+      border-width:0 1px 0 0;
+      
+      .btn {
+        position:absolute;
+        bottom:0;
+        width:100%;
+        display:block;
+        border-radius:0;
+        left:0;
+        font-weight: 700;
+      }
+      
+      .progress {
+        height:200px;
+        border-radius:0;
+        position:relative;
+        margin:0;
+        background:fade-out($white,.8);
+        box-shadow:none;
+        
+        .progress-bar {
+          position:absolute;
+          width:100%;
+          bottom:0;
+          border-radius:0;
+          border:1px solid fade-out($black,.95);
+          @include transition(all 1s);
+          @include animation(bar-height-grow 1s 1);
+          height:0;
+          
+          &.lol-bar {
+            height:20%;
+          }
+          
+          &.omg-bar {
+            @include animation-delay(.1s);
+          }
+          
+          &.ftw-bar {
+            @include animation-delay(.2s);
+          }
+          
+          &.why-bar {
+            @include animation-delay(.3s);
+          }
+          
+          &.win-bar {
+            @include animation-delay(.4s);
+          }
+          
+          &.wtf-bar {
+            @include animation-delay(.5s);
+          }
+        }
+      }
+    }
+  }
+}
