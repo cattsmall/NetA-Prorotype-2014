@@ -6424,6 +6424,10 @@ button.close {
   .post-content .video-details .sharing ul li.more-options ul:after, .post-content .video-details .sharing ul li.more-options ul:before {
     display: none;
   }
+
+  .comments-area {
+    margin-top: 45px;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .hidden-md {
