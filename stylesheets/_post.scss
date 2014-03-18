@@ -2,6 +2,15 @@
 .post-content {
   padding:40px 10% 0 0;
   
+  .icon-source {
+    display:inline-block;
+    background:$gray;
+    width: 14px;
+    height: 14px;
+    margin: 0 4px;
+    vertical-align: middle;
+  }
+  
   .video-details {
     p:not(.meta) {
       font-size:1.5em;

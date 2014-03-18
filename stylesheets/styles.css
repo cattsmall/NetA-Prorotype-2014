@@ -7404,6 +7404,14 @@ img {
 .post-content {
   padding: 40px 10% 0 0;
 }
+.post-content .icon-source {
+  display: inline-block;
+  background: #555555;
+  width: 14px;
+  height: 14px;
+  margin: 0 4px;
+  vertical-align: middle;
+}
 .post-content .video-details p:not(.meta) {
   font-size: 1.5em;
   font-family: "Neuton", serif;
