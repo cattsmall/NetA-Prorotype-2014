@@ -4,16 +4,31 @@
   
   #reaction-chart-toggle {
     vertical-align:middle;
-    margin: 10px 0 0;
+    margin: 0;
     width: 100%;
     color:$link-color;
+    background:$black;
+    border:1px solid fade-out($white, .75);
+    border-radius:0;
     
     .ss-icon {
-      font-size:8px;
+      font-size:7px;
+      
+      &:not(.dropdown-icon){
+        font-size: 10px;
+        color: $gray;
+        margin: 0 2px 0 0;
+      }
+    }
+    
+    &:hover {
+      background:$gray-darker;
     }
   }
   
   .reaction-header {
+    margin:0 0 20px;
+    
     .facepile-data {
       @include clearfix;
       
@@ -39,19 +54,20 @@
   }
   
   .reactions {
-    padding:0;
+    padding:0 0 10px;
     margin:0;
     @include clearfix;
     list-style:none;
-    
+        
     &.slidedown {
       display:none;
     }
     
     li {
       float:left;
+      height:100px;
       width:16.666%;
-      padding:10px 0 31px;
+      padding:0 0 31px;
       position:relative;
       border:1px solid $black;
       border-width:0 1px 0 0;
@@ -67,12 +83,12 @@
       }
       
       .progress {
-        height:100px;
         border-radius:0;
         position:relative;
         margin:0;
         background:fade-out($white,.8);
         box-shadow:none;
+        height:100%;
         
         .progress-bar {
           position:absolute;

@@ -36,20 +36,57 @@
         <nav class="video-interactions">
           <ul class="share-options">
             <li>
-              <button class="btn btn-primary">
-                <i class="ss-icon ss-standard">like</i>
-                Like
+              <button class="btn btn-danger">
+                <i class="ss-icon ss-social">googleplus</i>
+                 +1
               </button>
+            </li>
+            <li class="more-options">
+              <button class="btn btn-default">
+                <i class="ss-icon ss-social">share</i>
+              </button>
+              <ul class="more-options-list">
+                <li>
+                  <button class="btn btn-default">
+                    <i class="ss-icon ss-social">link</i>
+                    Copy link
+                  </button>
+                </li>
+                <li>
+                  <button class="btn btn-default">
+                      <i class="ss-icon ss-social">twitter</i>
+                      Tweet
+                  </button>
+                </li>
+                <li>
+                  <button class="btn btn-default">
+                    <i class="ss-icon ss-social">facebook</i>
+                    Share
+                  </button>
+                </li>
+                <li>
+                  <button class="btn btn-default">
+                    <i class="ss-icon ss-social">reddit</i>
+                    Reddit
+                  </button>
+                </li>
+                <li>
+                  <button class="btn btn-default">
+                    <i class="ss-icon ss-social">Tumblr</i>
+                    Tumblr
+                  </button>
+                </li>
+              </ul>
             </li>
             <li>
               <ul class="reactions">
                 <li><h3>React</h3></li>
-                <li><button class="btn btn-danger">LOL</button></li>
-                <li><button class="btn btn-danger">OMG</button></li>
-                <li><button class="btn btn-danger">FTW</button></li>
-                <li><button class="btn btn-danger">WHY</button></li>
-                <li><button class="btn btn-danger">WIN</button></li>
-                <li><button class="btn btn-danger">WTF</button></li>
+                <li><button class="btn">LOL</button></li>
+                <li><button class="btn">OMG</button></li>
+                <li><button class="btn">FTW</button></li>
+                <li><button class="btn">WHY</button></li>
+                <li><button class="btn">WIN</button></li>
+                <li><button class="btn">WTF</button></li>
               </ul>
           </ul>
         </nav>
@@ -70,28 +107,47 @@
             <footer class="sharing">
               <ul class="share-options">
                 <li>
-                  <button class="btn btn-primary">
-                    <i class="ss-icon ss-standard">like</i>
-                    Like
+                  <button class="btn btn-danger">
+                   <i class="ss-icon ss-social">googleplus</i>
+                    +1
                   </button>
                 </li>
                 <li>
                   <button class="btn btn-default">
-                    <i class="ss-icon ss-social">facebook</i>
-                    Share
-                  </button>
+                   <i class="ss-icon ss-social">link</i>
+                   Copy link
+                </button>
                 </li>
-                <li>
+                <li class="more-options">
                   <button class="btn btn-default">
-                    <i class="ss-icon ss-social">twitter</i>
-                    Tweet
+                    ● ● ●
                   </button>
-                </li>
-                <li>
-                  <button class="btn btn-default">
-                    <i class="ss-icon ss-social">email</i>
-                    Email
-                  </button>
+                  <ul class="more-options-list">
+                    <li>
+                      <button class="btn btn-default">
+                          <i class="ss-icon ss-social">twitter</i>
+                          Tweet
+                      </button>
+                    </li>
+                    <li>
+                      <button class="btn btn-default">
+                        <i class="ss-icon ss-social">facebook</i>
+                        Share
+                      </button>
+                    </li>
+                    <li>
+                      <button class="btn btn-default">
+                        <i class="ss-icon ss-social">reddit</i>
+                        Reddit
+                      </button>
+                    </li>
+                    <li>
+                      <button class="btn btn-default">
+                        <i class="ss-icon ss-social">Tumblr</i>
+                        Tumblr
+                      </button>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </footer>
@@ -250,8 +306,9 @@
               </li>
             </ul>
             <button class="btn btn-sm btn-default" id="reaction-chart-toggle">
+              <i class="ss-icon ss-standard">&#x1F4CA;</i>
               <span>Show reaction chart</span>
-              <i class="ss-icon ss-standard">
+              <i class="ss-icon ss-standard dropdown-icon">
                 dropdown
               </i>
              </button>
@@ -267,7 +324,7 @@
               <h3>Top Comment</h3>
               <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
             </div>
-            <h3>5 Comments about this video</h3>
+            <h3>8 Comments about this video</h3>
             <ul class="comments-list">
               <li class="comment">
                 <a><img src="img/users/128-2.jpg"></a>
@@ -277,6 +334,11 @@
                   <a>Like</a>
                   <a>Reply</a>
                 </p>
+                
+                <button class="btn btn-sm btn-default comment-more-btn">
+                  <i class="ss-icon ss-standard">chat</i>
+                  <span>See 3 replies to this comment</span>
+                 </button>
               </li>
               
               <li class="comment">

@@ -2,7 +2,7 @@ $( "#reaction-chart-toggle" ).click(function() {
   $( "#reaction-chart" ).slideToggle( "fast" );
   if ($(this).find("span").text() == "Show reaction chart") {
     $(this).find("span").text("Hide reaction chart");
-    $(this).find(".ss-icon").text("directup");
+    $(this).find(".ss-icon.dropdown-icon").text("directup");
     
     // Animations
     setTimeout(function() {
@@ -28,7 +28,7 @@ $( "#reaction-chart-toggle" ).click(function() {
   
   else {
     $(this).find("span").text("Show reaction chart");
-    $(this).find(".ss-icon").text("dropdown");
+    $(this).find(".ss-icon.dropdown-icon").text("dropdown");
     
     $( ".reactions li .progress .progress-bar" ).css( "height", "" );
   }

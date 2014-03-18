@@ -90,6 +90,19 @@
           width:64px;
           margin-right:15px;
         }
+        
+        .comment-more-btn {
+          background:$black;
+          border:1px solid fade-out($white, .75);
+          border-radius:0;
+          width: 100%;
+          margin:10px 0 0;
+          color:$link-color;
+          
+          &:hover {
+            background:$gray-darker;
+          }
+        }
       }
     }
   }

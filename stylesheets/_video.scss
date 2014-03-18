@@ -6,6 +6,7 @@
     iframe, video {
       width:100% !important;
       height:auto;
+      display:block;
     }
   }
   
@@ -13,7 +14,7 @@
     position:absolute;
     @include transition(.2s opacity);
     opacity:0;
-    top:10px;
+    top:80px;
     left:10px;
     text-align:right;
     
@@ -37,6 +38,62 @@
           display:block;
           padding:20px 10px;
           min-width: 80px;
+        }
+        
+        &.more-options {
+          position:relative;
+          margin-top:10px;
+        
+          .btn {
+            background:$black;
+            border:1px solid $gray;
+            
+            &:hover {
+              color:$white;
+            }
+          }
+          
+          > .btn {
+            opacity:1;
+            position:relative;
+            @include transition(opacity .2s);
+            font-weight:normal;
+          }
+          
+          ul {
+            opacity:0;
+            @include clearfix;
+            @include transition(opacity .2s);
+            position:absolute;
+            z-index:-1;
+            min-width: 600px;
+            top:0;
+            list-style:none;
+            padding:0;
+            
+            li {
+              float:left;
+              
+              .btn {
+                padding:20px;
+              }
+              
+              + li {
+                margin-left:10px;
+              }
+            }
+          }
+          
+          &:hover {
+            > .btn {
+              opacity:0;
+            }
+            
+            ul {
+              opacity:1;
+              z-index:1;
+            }
+          }
         }
       }
       
