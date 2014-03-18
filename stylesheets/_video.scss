@@ -1,19 +1,11 @@
 .video-container {
   position:relative;
   margin:0 auto;
-  max-width:898px;
-  
-  &.highres {
-    max-width:1920px;
-  }
-  
-  &.hd1080 {
-    max-width:1080px;
-  }
   
   .video-player {
-    img {
-      width:100%;
+    iframe, video {
+      width:100% !important;
+      height:auto;
     }
   }
   

@@ -40,3 +40,9 @@ $( ".video-interactions .share-options .reactions .btn" ).click(function() {
 
 $('.carousel').carousel();
 
+// Set video height to .5625* the width
+$("#video-object").height($("#video-object").width() * .5625);
+
+$(window).resize(function() {
+  $("#video-object").height($("#video-object").width() * .5625);
+});

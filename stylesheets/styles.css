@@ -7287,16 +7287,10 @@ img {
 .video-container {
   position: relative;
   margin: 0 auto;
-  max-width: 898px;
 }
-.video-container.highres {
-  max-width: 1920px;
-}
-.video-container.hd1080 {
-  max-width: 1080px;
-}
-.video-container .video-player img {
-  width: 100%;
+.video-container .video-player iframe, .video-container .video-player video {
+  width: 100% !important;
+  height: auto;
 }
 .video-container .video-interactions {
   position: absolute;
@@ -7519,7 +7513,7 @@ img {
   font-weight: 700;
 }
 .reaction-data .reactions li .progress {
-  height: 200px;
+  height: 100px;
   border-radius: 0;
   position: relative;
   margin: 0;
