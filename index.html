@@ -1,398 +1,44 @@
 <!doctype html>
-<html>
+<html ng-app="netApp">
   <head>
     <title>Network A</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="stylesheets/styles.css" type="text/css" media="screen" title="no title" charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/lib/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/lib/ui-bootstrap-tpls-0.10.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- Angular Scripts -->
+    <script src="js/angular/app.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/angular/controllers.js" type="text/javascript" charset="utf-8"></script>
+    
   </head>
-  <body>
+  <body ng-controller="videosController">
     <nav class="navigation">
       Navigation
     </nav>
-    <article class="">
-      <!-- Post data -->
-      <header class="page-header">
-        <div class="container">
-          <h1>
-            NKA Project: The tiebreaker of Jon Depoin and Elliot Murphy's Game of SKATE battle
-          </h1>
-          <p class="meta">
-            <span class="view-count">130,000 views</span>
-            <span>Sponsored by <strong class="icon-target">Target</strong></span>
-            <span>
-              We rated this <strong class="omg-reaction">OMG</strong>
-            </span>
-          </p>
-        </div>
-      </header>
-      
-      <!-- Video -->
-      <section class="video-container">
-        <div class="video-player">
-        <iframe id="video-object" src="http://player.vimeo.com/video/18901806" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          <!-- <iframe id="video-object" class="ng-scope" frameborder="0" allowfullscreen="1" title="YouTube video player" src="http://www.youtube.com/embed/2cF8oA0zn7A?wmode=transparent&amp;modestbranding=1&amp;fs=1&amp;showinfo=0&amp;iv_load_policy=3&amp;rel=0&amp;enablejsapi=1&amp;version=3&amp;allowScriptAccess=always&amp;allowFullScreen=true&amp;origin=http%3A%2F%2Fwww.networka.com"></iframe> -->
-        </div>
-        <nav class="video-interactions">
-          <ul class="share-options">
-            <li>
-              <button class="btn btn-danger">
-                <i class="ss-icon ss-social">googleplus</i>
-                 +1
-              </button>
-            </li>
-            <li class="more-options">
-              <button class="btn btn-default">
-                <i class="ss-icon ss-social">share</i>
-              </button>
-              <ul class="more-options-list">
-                <li>
-                  <button class="btn btn-default">
-                    <i class="ss-icon ss-social">link</i>
-                    Copy link
-                  </button>
-                </li>
-                <li>
-                  <button class="btn btn-default">
-                      <i class="ss-icon ss-social">twitter</i>
-                      Tweet
-                  </button>
-                </li>
-                <li>
-                  <button class="btn btn-default">
-                    <i class="ss-icon ss-social">facebook</i>
-                    Share
-                  </button>
-                </li>
-                <li>
-                  <button class="btn btn-default">
-                    <i class="ss-icon ss-social">reddit</i>
-                    Reddit
-                  </button>
-                </li>
-                <li>
-                  <button class="btn btn-default">
-                    <i class="ss-icon ss-social">Tumblr</i>
-                    Tumblr
-                  </button>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul class="reactions">
-                <li><h3>React</h3></li>
-                <li><button class="btn">LOL</button></li>
-                <li><button class="btn">OMG</button></li>
-                <li><button class="btn">FTW</button></li>
-                <li><button class="btn">WHY</button></li>
-                <li><button class="btn">WIN</button></li>
-                <li><button class="btn">WTF</button></li>
-              </ul>
-          </ul>
-        </nav>
+     <div class="container">
+      <section class="col-md-9">
+        <ul class="video-list">
+          <li ng-repeat="video in videos">
+            <a>
+              <h2>{{video.name}}</h2>
+              <p>{{video.short_description}}</p>
+              <img ng-src="img/video_pictures/{{video.picture_id}}.jpg" alt="996c8326 E252 443e 9d79 573f5d210c24">
+            </a>
+          </li>
+        </ul>
       </section>
-      
-      <!-- Post content -->
-      <section class="post container">
-        <!-- Editorial content -->
-        <div class="post-content col-md-8">
-          <section class="video-details">
-            <p class="meta">
-              <span>Posted on January 17, 2014.</span>
-              <span>Discovered on <a><i class="icon-source"></i>vjr300ify</a>.</span>
-            </p>
-            <p>This clip of skater Jaasir Linger skating benches in Amsterdam is from 2012, but it still teaches a lesson that is immensely valuable today: When skating benches always make sure to watch out for falling slabs of concrete. Because that's the kind of thing that happens sometimes. This lesson also applies to riding in buses in Amsterdam. Thankfully no one was in this one.</p>
-            <p><em>What are some other similar skateboarding lessons? Share them in the comments.</em></p>
-            <!-- Sharing -->
-            <footer class="sharing">
-              <ul class="share-options">
-                <li>
-                  <button class="btn btn-danger">
-                   <i class="ss-icon ss-social">googleplus</i>
-                    +1
-                  </button>
-                </li>
-                <li>
-                  <button class="btn btn-default">
-                   <i class="ss-icon ss-social">link</i>
-                   Copy link
-                </button>
-                </li>
-                <li class="more-options">
-                  <button class="btn btn-default">
-                    ● ● ●
-                  </button>
-                  <ul class="more-options-list">
-                    <li>
-                      <button class="btn btn-default">
-                          <i class="ss-icon ss-social">twitter</i>
-                          Tweet
-                      </button>
-                    </li>
-                    <li>
-                      <button class="btn btn-default">
-                        <i class="ss-icon ss-social">facebook</i>
-                        Share
-                      </button>
-                    </li>
-                    <li>
-                      <button class="btn btn-default">
-                        <i class="ss-icon ss-social">reddit</i>
-                        Reddit
-                      </button>
-                    </li>
-                    <li>
-                      <button class="btn btn-default">
-                        <i class="ss-icon ss-social">Tumblr</i>
-                        Tumblr
-                      </button>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </footer>
-          </section>
-          
-          <!-- Related videos -->
-          <aside class="related-videos">
-            <!-- Tagged Videos -->
-            <section class="tags">
-              <h4>Videos with related tags:</h4>
-              <nav class="tags-nav">
-                <ul class="nav nav-tabs">
-                  <li class="active">
-                    <a href="#surf" data-toggle="tab">Surf</a>
-                  </li>
-                  <li>
-                    <a href="#malibu" data-toggle="tab">Malibu</a>
-                  </li>
-                  <li>
-                    <a href="#c-o-p" data-toggle="tab">Crazy Old People</a>
-                  </li>
-                </ul>
-              </nav>
-              <div class="tab-content">
-                <div class="tab-pane fade in active" id="surf">
-                  <ul class="video-list-small">
-                    <li>
-                      <a>
-                        <h2>Cats in a racecar riding through Italy</h2>
-                        <p>Wow.</p>
-                        <img src="img/videos/fee95390-7af4-46f9-8a62-95666a5071ed.jpg" alt="44130ec6 De11 4c91 83cb Faafec9d2fa5">
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <h2>Porta Purus Vehicula Ultricies Tortor</h2>
-                        <p>It's pretty crazy.</p>
-                        <img src="img/videos/e3c47890-1cf2-4a76-ae75-7cba0e8e991d.jpg" alt="996c8326 E252 443e 9d79 573f5d210c24">
-                      </a>
-                    </li>
-                  </ul>
-                  <a class="btn btn-default pull-right">See all 10 Surf videos</a>
-                </div>
-                <div class="tab-pane fade" id="malibu">
-                  <ul class="video-list-small">
-                    <li>
-                      <a>
-                        <h2>Porta Purus Vehicula Ultricies Tortor</h2>
-                        <p>It's pretty crazy.</p>
-                        <img src="img/videos/e3c47890-1cf2-4a76-ae75-7cba0e8e991d.jpg" alt="996c8326 E252 443e 9d79 573f5d210c24">
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <h2>Lorem Fusce Ullamcorper Mollis Justo</h2>
-                        <p>It's pretty crazy.</p>
-                        <img src="img/videos/996c8326-e252-443e-9d79-573f5d210c24.jpg" alt="996c8326 E252 443e 9d79 573f5d210c24">
-                      </a>
-                    </li>
-                  </ul>
-                <a class="btn btn-default pull-right">See all 28 Malibu videos</a>
-                </div>
-                <div class="tab-pane fade" id="c-o-p">
-                  <ul class="video-list-small">
-                    <li>
-                      <a>
-                        <h2>Lorem Fusce Ullamcorper Mollis Justo</h2>
-                        <p>It's pretty crazy.</p>
-                        <img src="img/videos/996c8326-e252-443e-9d79-573f5d210c24.jpg" alt="996c8326 E252 443e 9d79 573f5d210c24">
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <h2>Tortor Tellus Etiam Malesuada vel eu leo</h2>
-                        <p>It's pretty crazy.</p>
-                        <img src="img/videos/ea013081-ee55-4d6d-bdcd-fec0146fba90.jpg" alt="996c8326 E252 443e 9d79 573f5d210c24">
-                      </a>
-                    </li>
-                  </ul>
-                  <a class="btn btn-default pull-right">See all 13 Crazy Old People videos</a>
-                </div>
-              </div>
-            </section>
-            
-            <!-- Videos -->
-            <section class="video-discovery">
-              <h4>Up next:</h4>
-              <a class="next-video" href="#">
-                <h2>Cats on a bicycle in Paris</h2>
-                <p>Wow.</p>
-                <img src="img/videos/CWBMX_StPaddys.jpg" alt="44130ec6 De11 4c91 83cb Faafec9d2fa5">
-              </a>
-            </section>
-          </aside>
-        </div>
-        
-        <aside class="comments-area col-md-4">
-          <!-- Reactions -->
-          <section class="reaction-data">
-            <header class="reaction-header">
-              <h3>Reactions to this video</h3>
-              <div class="facepile-data">
-                <ul class="facepile">
-                  <li><img src="img/users/128-1.jpg"></li>
-                  <li><img src="img/users/128-2.jpg"></li>
-                  <li><img src="img/users/128-3.jpg"></li>
-                  <li><img src="img/users/128-4.jpg"></li>
-                </ul>
-                <p>
-                  13 of your friends thought this video was <strong class="omg-reaction">OMG</strong>
-                </p>
-              </div>
-            </header>
-            <ul class="reactions slidedown" id="reaction-chart">
-              <li>
-                <div class="progress">
-                  <div class="progress-bar progress-bar-danger lol-bar">
-                  </div>
-                </div>
-                <button class="btn btn-danger">LOL</button>
-              </li>
-              <li>
-                <div class="progress">
-                  <div class="progress-bar progress-bar-danger omg-bar">
-                  </div>
-                </div>
-                <button class="btn btn-danger">OMG</button>
-              </li>
-              <li>
-                <div class="progress">
-                  <div class="progress-bar progress-bar-danger ftw-bar">
-                  </div>
-                </div>
-                <button class="btn btn-danger">FTW</button>
-              </li>
-              <li>
-                <div class="progress">
-                  <div class="progress-bar progress-bar-danger why-bar">
-                  </div>
-                </div>
-                <button class="btn btn-danger">WHY</button>
-              </li>
-              <li>
-                <div class="progress">
-                  <div class="progress-bar progress-bar-danger win-bar">
-                  </div>
-                </div>
-                <button class="btn btn-danger">WIN</button>
-              </li>
-              <li>
-                <div class="progress">
-                  <div class="progress-bar progress-bar-danger wtf-bar">
-                  </div>
-                </div>
-                <button class="btn btn-danger">WTF</button>
-              </li>
-            </ul>
-            <button class="btn btn-sm btn-default" id="reaction-chart-toggle">
-              <i class="ss-icon ss-standard">&#x1F4CA;</i>
-              <span>Show reaction chart</span>
-              <i class="ss-icon ss-standard dropdown-icon">
-                dropdown
-              </i>
-             </button>
-          </section>
-          
-          <!-- Commenting -->
-          <div class="commenting">
-            <form class="comment-form">
-              <textarea placeholder="Leave a comment and start a conversation!"></textarea>
-              <button class="btn btn-primary">Post your comment</button>
-            </form>
-            <div class="top-comment">
-              <h3>Top Comment</h3>
-              <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-              <a>Reply to this comment</a>
-            </div>
-            <h3>8 Comments about this video</h3>
-            <ul class="comments-list">
-              <li class="comment">
-                <a><img src="img/users/128-2.jpg"></a>
-                <h4><a>Judy M. Jordan</a></h4>
-                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                <p class="comment-options">
-                  <a>Like</a>
-                  <a>Reply</a>
-                </p>
-                
-                <button class="btn btn-sm btn-default comment-more-btn">
-                  <i class="ss-icon ss-standard">chat</i>
-                  <span>See 3 replies to this comment</span>
-                 </button>
-              </li>
-              
-              <li class="comment">
-                <a><img src="img/users/128-6.jpg"></a>
-                <h4><a>Justin M. Wright</a></h4>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-                <p class="comment-options">
-                  <a>Like</a>
-                  <a>Reply</a>
-                </p>
-              </li>
-              
-              <li class="comment">
-                <a><img src="img/users/128-13.jpg"></a>
-                <h4><a>William Jones</a></h4>
-                <p>Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                <p class="comment-options">
-                  <a>Like</a>
-                  <a>Reply</a>
-                </p>
-              </li>
-              
-              <li class="comment">
-                <a><img src="img/users/128-7.jpg"></a>
-                <h4><a>Kathy Souther</a></h4>
-                <p>Curabitur blandit tempus porttitor.</p>
-                <p class="comment-options">
-                  <a>Like</a>
-                  <a>Reply</a>
-                </p>
-              </li>
-              
-              <li class="comment">
-                <a><img src="img/users/128-16.jpg"></a>
-                <h4><a>Jennie J. Waits</a></h4>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-                <p class="comment-options">
-                  <a>Like</a>
-                  <a>Reply</a>
-                </p>
-              </li>
-            </ul>
-          </div>
-        </aside>
+      <section class="col-md-3" ng-controller="reactionsController">
+        <ul class="reactions-feed">
+          <li ng-repeat="reaction in reactions">
+            <a>
+              <h2>{{reaction.actionable.name}}</h2>
+              <img ng-src="img/video_pictures/{{reaction.actionable.picture_id}}.jpg" alt="996c8326 E252 443e 9d79 573f5d210c24">
+            </a>
+            {{reaction.name}}
+          </li>
+        </ul>
       </section>
-    </article>
-    
-    <!-- Scripts -->
-    <script src="js/lib/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/lib/bootstrap.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/lib/bootstrap/transition.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/lib/bootstrap/carousel.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/lib/bootstrap/tab.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/scripts.js" type="text/javascript" charset="utf-8"></script>
+    </div>
   </body>
 </html>

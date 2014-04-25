@@ -4,9 +4,10 @@
   
   .video-player {
     iframe, video {
-      width:100% !important;
+      width:95% !important;
       height:auto;
       display:block;
+      margin:0 auto;
     }
   }
   

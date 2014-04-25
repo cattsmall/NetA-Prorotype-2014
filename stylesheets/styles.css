@@ -7289,9 +7289,10 @@ img {
   margin: 0 auto;
 }
 .video-container .video-player iframe, .video-container .video-player video {
-  width: 100% !important;
+  width: 95% !important;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 .video-container .video-interactions {
   position: absolute;
