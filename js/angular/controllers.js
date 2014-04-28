@@ -925,5 +925,23 @@ netApp.controller('reactionsController', function ($scope) {
     }
     }
     }
-    ]
+  ]
+  
+  $scope.clusterReactions = function() {
+    $scope.clusteredActions = [];
+    $scope.userIds = [];
+    
+    angular.forEach($scope.reactions, function(reaction, key) {
+      if (!(reaction.participant.id in $scope.userIds)) {
+        $scope.userIds[reaction.participant.id] = {id: reaction.participant.id, name:reaction.participant.name, reactions: []};
+        $scope.clusteredActions.push($scope.userIds[reaction.participant.id]);
+      }
+      $scope.userIds[reaction.participant.id].reactions.push(reaction.reaction_id);
+    } );
+    
+    console.log ($scope.userIds);
+    
+  }
+  
+  $scope.clusterReactions();
 });

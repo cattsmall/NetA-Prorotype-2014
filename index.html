@@ -32,10 +32,12 @@
         <ul class="reactions-feed">
           <li ng-repeat="reaction in reactions">
             <a>
-              <h2>{{reaction.actionable.name}}</h2>
               <img ng-src="img/video_pictures/{{reaction.actionable.picture_id}}.jpg" alt="996c8326 E252 443e 9d79 573f5d210c24">
             </a>
-            {{reaction.name}}
+            <div ng-if="reaction.type == 'react'">
+              {{reaction.participant.name}} thinks {{reaction.actionable.name}} is
+              <span ng-class="reaction-{{reaction.reaction_id}}">{{reaction.reaction_id}}</span>
+            </div>
           </li>
         </ul>
       </section>
