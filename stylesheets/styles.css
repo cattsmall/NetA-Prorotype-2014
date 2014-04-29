@@ -7923,6 +7923,46 @@ img {
   background: #222222;
 }
 
+.reaction-image {
+  display: inline-block;
+  font-size: 0;
+  background: #d9534f;
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+.reaction-image:before {
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+.reaction-image.reaction-1:before {
+  content: "LOL";
+}
+.reaction-image.reaction-2:before {
+  content: "OMG";
+}
+.reaction-image.reaction-3:before {
+  content: "WTF";
+}
+.reaction-image.reaction-4:before {
+  content: "HOLY";
+}
+.reaction-image.reaction-5:before {
+  content: "FTW";
+}
+.reaction-image.reaction-6:before {
+  content: "MEH";
+}
+.reaction-image.reaction-7:before {
+  content: "FAIL";
+}
+
 .clearfix:before, .clearfix:after {
   content: " ";
   display: table;

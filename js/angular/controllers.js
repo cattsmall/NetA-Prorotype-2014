@@ -928,19 +928,29 @@ netApp.controller('reactionsController', function ($scope) {
   ]
   
   $scope.clusterReactions = function() {
-    $scope.clusteredActions = [];
-    $scope.userIds = [];
+    $scope.clusteredReactions = [];
+    $scope.videoIds = [];
+    $scope.userReaction = [];
     
     angular.forEach($scope.reactions, function(reaction, key) {
-      if (!(reaction.participant.id in $scope.userIds)) {
-        $scope.userIds[reaction.participant.id] = {id: reaction.participant.id, name:reaction.participant.name, reactions: []};
-        $scope.clusteredActions.push($scope.userIds[reaction.participant.id]);
+      // If the video isn't in the list of videos
+      if (!(reaction.actionable.id in $scope.videoIds)) {
+        //Create video
+        $scope.videoIds[reaction.actionable.id] = {content:reaction.actionable, users:[]};
+        // Push videoids to cluster
+        $scope.clusteredReactions.push($scope.videoIds[reaction.actionable.id]);
       }
-      $scope.userIds[reaction.participant.id].reactions.push(reaction.reaction_id);
+      
+      
+      // if the user isn't in the list of video users
+      if (!(reaction.participant.id in $scope.videoIds[reaction.actionable.id].users)) {
+        $scope.videoIds[reaction.actionable.id].users.push(reaction.participant);
+        console.log($scope.clusteredReactions);
+        $scope.videoIds[reaction.actionable.id].users[reaction.participant.id].reactions.push(reaction.reaction_id);
+      }
     } );
     
-    console.log ($scope.userIds);
-    
+    console.log($scope.clusteredReactions);
   }
   
   $scope.clusterReactions();

@@ -30,13 +30,19 @@
       </section>
       <section class="col-md-3" ng-controller="reactionsController">
         <ul class="reactions-feed">
-          <li ng-repeat="reaction in reactions">
+          <li ng-repeat="reaction in clusteredReactions">
             <a>
-              <img ng-src="img/video_pictures/{{reaction.actionable.picture_id}}.jpg" alt="996c8326 E252 443e 9d79 573f5d210c24">
+              <img ng-src="img/video_pictures/{{reaction.content.picture_id}}.jpg" alt="996c8326 E252 443e 9d79 573f5d210c24">
             </a>
-            <div ng-if="reaction.type == 'react'">
-              {{reaction.participant.name}} thinks {{reaction.actionable.name}} is
-              <span ng-class="reaction-{{reaction.reaction_id}}">{{reaction.reaction_id}}</span>
+            <div ng-if="reaction.users.length == 1">
+              <strong>{{reaction.users.0.name}}</strong> thinks <strong>{{reaction.content.name}}</strong> is
+              <span class="reaction-image reaction-{{reaction.reactions.0}}">{{reaction.reactions.0}}</span>
+            </div>
+            <div ng-if="reaction.users.length > 1">
+              <strong>{{reaction.username}}</strong> thinks <strong>{{reaction.content.name}}</strong> is
+              <span class="reaction-image reaction-{{reaction.reactions.0}}">{{reaction.reactions.0}}</span>
+              <span class="reaction-image reaction-{{reaction.reactions.1}}">{{reaction.reactions.1}}</span>
+              <span ng-if="reaction.reactions.2" class="reaction-image reaction-{{reaction.reactions.2}}">{{reaction.reactions.2}}</span>
             </div>
           </li>
         </ul>
